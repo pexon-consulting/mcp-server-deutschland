@@ -1,0 +1,9 @@
+__pycache__/
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+.venv/
+
+# Beispielausgaben aus README und CLI im Paketordner; tests/fixtures bleibt erfasst
+/EXTF_*.csv

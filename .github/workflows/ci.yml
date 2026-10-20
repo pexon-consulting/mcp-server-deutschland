@@ -1,0 +1,116 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  liste:
+    name: Liste (daten/ und tests/)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - name: Abhängigkeiten
+        run: python -m pip install pyyaml==6.0.3 pytest==9.1.1
+      - name: Tests
+        run: python -m pytest tests -q
+
+  datev:
+    name: EXTF-Server (Python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Installieren
+        run: python -m pip install "./server/extf-buchungsstapel[test]"
+      - name: Tests
+        working-directory: server/extf-buchungsstapel
+        run: python -m pytest -q
+      - name: Einstiegspunkte
+        run: |
+          extf-buchungsstapel-mcp --version
+          extf-buchungsstapel --version
+
+  beispiele:
+    name: Beispiele (Python und TypeScript)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "22"
+      - name: Python-Beispiel
+        working-directory: beispiele/feiertage-python
+        run: |
+          python -m pip install ".[test]"
+          python -m pytest -q
+      - name: TypeScript-Beispiel
+        working-directory: beispiele/feiertage-typescript
+        run: |
+          npm ci --no-audit --no-fund
+          npm test
+
+  lint:
+    name: Keine Gedankenstriche (U+2013, U+2014)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - name: Prüfen
+        shell: python
+        run: |
+          import pathlib
+          import sys
+
+          verboten = {"\u2013": "U+2013", "\u2014": "U+2014"}
+          endungen = {".md", ".py", ".yaml", ".yml"}
+          auslassen = {".git", "node_modules", ".venv", "venv"}
+          treffer = 0
+          for pfad in sorted(pathlib.Path(".").rglob("*")):
+              if pfad.suffix not in endungen or not pfad.is_file():
+                  continue
+              if auslassen & set(pfad.parts):
+                  continue
+              text = pfad.read_text(encoding="utf-8", errors="replace")
+              for nr, zeile in enumerate(text.splitlines(), 1):
+                  for zeichen, name in verboten.items():
+                      if zeichen in zeile:
+                          treffer += 1
+                          print(f"::error file={pfad},line={nr}::{name} gefunden, bitte Bindestrich verwenden")
+          print(f"{treffer} Verstöße")
+          sys.exit(1 if treffer else 0)

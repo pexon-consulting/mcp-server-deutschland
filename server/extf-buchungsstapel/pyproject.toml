@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "extf-buchungsstapel-mcp"
+version = "0.1.0"
+description = "MCP-Server und Python-Bibliothek zum Schreiben, Lesen und Prüfen von Buchungsstapeln im DATEV-Format (EXTF). Lokal, ohne Netzwerkzugriff. Kein Produkt der DATEV eG."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "mcp-server-deutschland contributors" }]
+keywords = ["datev", "extf", "buchungsstapel", "mcp", "model-context-protocol", "buchhaltung"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Natural Language :: German",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business :: Financial :: Accounting",
+]
+dependencies = ["mcp>=2.3,<3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+extf-buchungsstapel-mcp = "extf_buchungsstapel_mcp.server:main"
+extf-buchungsstapel = "extf_buchungsstapel_mcp.cli:main"
+
+[project.urls]
+Repository = "https://github.com/pexon-consulting/mcp-server-deutschland"
+Source = "https://github.com/pexon-consulting/mcp-server-deutschland/tree/main/server/extf-buchungsstapel"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/extf_buchungsstapel_mcp"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "SECURITY.md", "SPEZIFIKATION.md", "LICENSE", "pyproject.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

@@ -1,0 +1,45 @@
+mcp-server-deutschland
+Copyright (c) 2026 Pexon Consulting GmbH and contributors
+Lizenz: MIT (siehe LICENSE)
+
+Marken
+------
+DATEV ist eine Marke der DATEV eG. Dieses Projekt ist kein Produkt der
+DATEV eG und wurde von ihr weder geprüft noch freigegeben.
+
+SAP, Microsoft, Dynamics 365, Business Central, Power BI, Fabric,
+HubSpot, Lexware, lexware office, sevdesk, Personio, Shopware, Odoo,
+PostgreSQL, Claude, ChatGPT, Cursor, Visual Studio Code und alle anderen
+genannten Produkt- und Firmennamen sind Marken oder eingetragene Marken
+ihrer jeweiligen Inhaber. Die Nennung dient nur der Beschreibung der
+Kompatibilität. Es besteht keine Verbindung zu den Inhabern, und sie
+haben dieses Projekt nicht geprüft, freigegeben oder empfohlen.
+
+Verlinkte Server
+----------------
+Die Liste in daten/server.yaml und docs/liste.md verweist auf Projekte
+Dritter. Deren Code ist nicht Teil dieses Repositorys und steht unter
+der jeweils eigenen Lizenz. Ein Eintrag ist keine Empfehlung und keine
+Sicherheitsprüfung.
+
+DATEV-Format
+------------
+server/extf-buchungsstapel setzt die öffentlich beschriebene Formatbeschreibung
+"DATEV-Format" (Buchungsstapel, Formatversion 13) um. Es enthält keinen
+Code und keine Programme der DATEV eG. Quellen je Regel stehen in
+server/extf-buchungsstapel/SPEZIFIKATION.md.
+
+Haftung
+-------
+Die Software und die Texte werden unentgeltlich und ohne Zusicherung
+bestimmter Eigenschaften bereitgestellt. Soweit gesetzlich zulässig, ist
+die Haftung ausgeschlossen. Unberührt bleibt die Haftung für Vorsatz und
+grobe Fahrlässigkeit, für Schäden aus der Verletzung des Lebens, des
+Körpers oder der Gesundheit, für arglistig verschwiegene Mängel und nach
+dem Produkthaftungsgesetz.
+
+Abhängigkeiten
+--------------
+Der DATEV-Server nutzt das MCP Python SDK (Paket "mcp", MIT-Lizenz).
+Die Beispiele nutzen das MCP Python SDK und das MCP TypeScript SDK
+(MIT bzw. Apache-2.0, siehe jeweiliges Paket).

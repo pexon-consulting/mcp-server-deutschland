@@ -1,0 +1,42 @@
+{
+  "kopf": {
+    "beraternummer": 1001,
+    "mandantennummer": 1,
+    "wj_beginn": "2026-01-01",
+    "sachkontenlaenge": 4,
+    "datum_von": "2026-09-01",
+    "datum_bis": "2026-09-30",
+    "bezeichnung": "Belege 09/2026",
+    "sachkontenrahmen": "03"
+  },
+  "buchungen": [
+    {
+      "belegdatum": "2026-09-02",
+      "umsatz": "1190,00",
+      "soll_haben": "S",
+      "konto": "10000",
+      "gegenkonto": "8400",
+      "belegfeld1": "RE2026-0815",
+      "buchungstext": "Muster GmbH Beratung September"
+    },
+    {
+      "belegdatum": "2026-09-15",
+      "umsatz": 59.5,
+      "soll_haben": "S",
+      "konto": 4930,
+      "gegenkonto": 1200,
+      "belegfeld1": "ER-4711",
+      "buchungstext": "Bürobedarf Größe A4",
+      "kost1": "100"
+    },
+    {
+      "belegdatum": "30.09.2026",
+      "umsatz": "2380.00",
+      "soll_haben": "H",
+      "konto": "70000",
+      "gegenkonto": "3400",
+      "belegfeld1": "LS/2026/09-1",
+      "buchungstext": "Nordlicht Beispiel GmbH Wartung"
+    }
+  ]
+}

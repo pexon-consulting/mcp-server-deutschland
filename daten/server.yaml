@@ -1,0 +1,2338 @@
+# MCP-Server für deutsche Geschäftssysteme. Quelle für docs/liste.md und README.md.
+# Felder und erlaubte Werte: scripts/liste_bauen.py. Erzeugen: python3 scripts/liste_bauen.py
+server:
+# ---------------------------------------------------------------- ERP
+- name: SAP Integration Suite MCP Gateway
+  kategorie: ERP
+  system: SAP S/4HANA und SAP-APIs
+  url: https://www.sap.com/products/technology-platform/integration-suite/agentic-ai.html
+  typ: offiziell
+  herkunft: SAP
+  transport: remote-gehostet
+  auth: OAuth 2.0 / OIDC
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  protokoll: 2025-11-25, 2026-07-28
+  hinweis: Macht SAP-APIs, iFlows und OpenAPI-Spezifikationen als MCP-Tools verfügbar. On-Premise-Systeme über den Cloud Connector. Teil der SAP Integration Suite.
+  quelle: https://www.sap.com/products/technology-platform/integration-suite/agentic-ai.html
+  geprueft_am: 2026-10-19
+- name: SAP ADT MCP Server
+  kategorie: ERP
+  system: SAP ABAP (ABAP Development Tools)
+  url: https://help.sap.com/docs/abap-cloud/abap-development-tools-for-visual-studio-code/enabling-adt-mcp-server?locale=en-US
+  typ: offiziell
+  herkunft: SAP
+  transport: http
+  auth: Token aus den ADT-Einstellungen
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Entwicklungswerkzeug. In Eclipse ab ADT 3.60 lokal unter localhost, Standardport 2234; Variante für VS Code laut SAP-Hilfe. Die ADT-Tools in VS Code setzen eine Joule-Lizenz voraus.
+  quelle: https://help.sap.com/docs/abap-cloud/abap-development-tools-for-visual-studio-code/enabling-adt-mcp-server?locale=en-US
+  geprueft_am: 2026-10-19
+- name: SAP CAP MCP Server
+  kategorie: ERP
+  system: SAP Cloud Application Programming Model
+  url: https://github.com/cap-js/mcp-server
+  repo: cap-js/mcp-server
+  typ: offiziell
+  herkunft: SAP
+  transport: stdio
+  auth: keine
+  zugriff: lesen
+  lizenz: Apache-2.0
+  sprache: JavaScript
+  sterne: 116
+  zuletzt_aktiv: 2026-10-16
+  archiviert: false
+  hinweis: Entwicklungswerkzeug. Durchsucht das CDS-Modell des lokalen Projekts und die CAP-Dokumentation.
+  quelle: https://github.com/cap-js/mcp-server
+  geprueft_am: 2026-10-19
+- name: SAP Fiori MCP Server
+  kategorie: ERP
+  system: SAP Fiori
+  url: https://github.com/SAP/open-ux-tools/tree/main/packages/fiori-mcp-server
+  repo: SAP/open-ux-tools
+  typ: offiziell
+  herkunft: SAP
+  transport: stdio
+  auth: keine
+  zugriff: lesen-schreiben
+  lizenz: Apache-2.0
+  sprache: TypeScript
+  sterne: 159
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Entwicklungswerkzeug. Erzeugt und ändert Fiori-Elements-Anwendungen im lokalen Projekt. Sterne und Aktivität beziehen sich auf das Monorepo open-ux-tools.
+  quelle: https://github.com/SAP/open-ux-tools/tree/main/packages/fiori-mcp-server
+  geprueft_am: 2026-10-19
+- name: UI5 MCP Server
+  kategorie: ERP
+  system: SAPUI5 / OpenUI5
+  url: https://github.com/UI5/mcp-server
+  repo: UI5/mcp-server
+  typ: offiziell
+  herkunft: SAP
+  transport: stdio
+  auth: keine
+  zugriff: lesen-schreiben
+  lizenz: Apache-2.0
+  sprache: TypeScript
+  sterne: 103
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Entwicklungswerkzeug. Legt UI5-Anwendungen und Integration Cards an und liefert API-Referenz und Linter-Ergebnisse.
+  quelle: https://github.com/UI5/mcp-server
+  geprueft_am: 2026-10-19
+- name: Business Central MCP Server
+  kategorie: ERP
+  system: Microsoft Dynamics 365 Business Central
+  url: https://mcp.businesscentral.dynamics.com
+  typ: offiziell
+  herkunft: Microsoft
+  transport: remote-gehostet
+  auth: OAuth (Microsoft Entra ID)
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Allgemein verfügbar seit 01.04.2026, Data Query Tools in Vorschau. Welche APIs freigegeben sind und ob geschrieben werden darf, legt eine Konfiguration in Business Central fest. Firmennamen mit Umlauten werden im Header Base64-kodiert.
+  quelle: https://learn.microsoft.com/en-us/dynamics365/business-central/dev-itpro/ai/use-mcp-server-non-microsoft
+  geprueft_am: 2026-10-19
+- name: Odoo MCP Server (AI-App)
+  kategorie: ERP
+  system: Odoo
+  url: https://www.odoo.com/documentation/20.0/applications/productivity/ai/mcp_server.html
+  typ: offiziell
+  herkunft: Odoo
+  transport: http
+  auth: OAuth (CIMD oder DCR, empfohlen) oder API-Schlüssel mit MCP-Scope
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Teil der AI-App von Odoo Enterprise ab Version 20.0 bzw. Odoo Online saas-19.4, nicht in 19.0. Endpunkt unter /mcp der eigenen Datenbank. 'Readonly Tool' ist nur ein Hinweis an den Client; die Rechte bestimmt der Odoo-Benutzer.
+  quelle: https://www.odoo.com/documentation/20.0/applications/productivity/ai/mcp_server.html
+  geprueft_am: 2026-10-19
+- name: JTL Developer MCP
+  kategorie: ERP
+  system: JTL-Wawi / JTL-Plattform
+  url: https://developer.jtl-software.com/mcp
+  typ: offiziell
+  herkunft: JTL-Software
+  transport: remote-gehostet
+  auth: keine
+  zugriff: lesen
+  lizenz: proprietär
+  hinweis: "Nur Entwicklerdokumentation, kein Zugriff auf ERP-Daten. Einen MCP-Zugang zum JTL-ERP kündigt JTL als offene Beta ab November 2026 an, Voraussetzung ERP 2.2 oder neuer. Ankündigung: https://www.jtl-software.com/en/ai/juno"
+  quelle: https://developer.jtl-software.com/build-with-ai
+  geprueft_am: 2026-10-19
+- name: vibing-steampunk
+  kategorie: ERP
+  system: SAP ABAP (ADT)
+  url: https://github.com/oisee/vibing-steampunk
+  repo: oisee/vibing-steampunk
+  typ: community
+  herkunft: oisee
+  transport: beides
+  auth: SAP-Benutzer (Basic) oder Zertifikat
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Go
+  sterne: 505
+  zuletzt_aktiv: 2026-10-09
+  archiviert: false
+  hinweis: ABAP-Entwicklung über die ADT-REST-API, inklusive Debugging und Tests. Einzelne Binärdatei in Go.
+  quelle: https://github.com/oisee/vibing-steampunk
+  geprueft_am: 2026-10-19
+- name: ARC-1
+  kategorie: ERP
+  system: SAP ABAP (ADT)
+  url: https://github.com/arc-mcp/arc-1
+  repo: arc-mcp/arc-1
+  typ: community
+  herkunft: arc-mcp
+  transport: beides
+  auth: SAP-Benutzer oder BTP-OAuth
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 229
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Standardmäßig nur lesend; Schreibrechte werden einzeln über SAP_ALLOW-Schalter und Paketgrenzen freigegeben.
+  quelle: https://github.com/arc-mcp/arc-1
+  geprueft_am: 2026-10-19
+- name: MCP SAP Docs
+  kategorie: ERP
+  system: SAP-Dokumentation
+  url: https://github.com/marianfoo/mcp-sap-docs
+  repo: marianfoo/mcp-sap-docs
+  typ: community
+  herkunft: marianfoo
+  transport: beides
+  auth: keine
+  zugriff: lesen
+  lizenz: Apache-2.0
+  sprache: TypeScript
+  sterne: 243
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Suche in SAP-Hilfe, Community und Beispielen; zusätzlich als öffentlicher Server ohne Anmeldung betrieben. Der Autor pflegt auch die Übersicht marianfoo/sap-ai-mcp-servers.
+  quelle: https://github.com/marianfoo/mcp-sap-docs
+  geprueft_am: 2026-10-19
+- name: mcp-abap-adt
+  kategorie: ERP
+  system: SAP ABAP (ADT)
+  url: https://github.com/mario-andreschak/mcp-abap-adt
+  repo: mario-andreschak/mcp-abap-adt
+  typ: community
+  herkunft: mario-andreschak
+  transport: stdio
+  auth: SAP-Benutzer (Basic)
+  zugriff: lesen
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 200
+  zuletzt_aktiv: 2026-09-16
+  archiviert: false
+  hinweis: Liest ABAP-Quelltext, Tabellenstrukturen und Pakete über ADT. Sechzehn Tools, alle lesend.
+  quelle: https://github.com/mario-andreschak/mcp-abap-adt
+  geprueft_am: 2026-10-19
+- name: OData MCP Bridge (Go)
+  kategorie: ERP
+  system: SAP OData-Dienste
+  url: https://github.com/oisee/odata_mcp_go
+  repo: oisee/odata_mcp_go
+  typ: community
+  herkunft: oisee
+  transport: beides
+  auth: Basic, Cookie oder durchgereichte Header
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Go
+  sterne: 145
+  zuletzt_aktiv: 2026-02-19
+  archiviert: false
+  hinweis: Erzeugt Tools aus beliebigen OData-v2/v4-Diensten. Schalter --read-only verfügbar.
+  quelle: https://github.com/oisee/odata_mcp_go
+  geprueft_am: 2026-10-19
+- name: BTP SAP OData to MCP Server
+  kategorie: ERP
+  system: SAP S/4HANA über SAP BTP
+  url: https://github.com/lemaiwo/btp-sap-odata-to-mcp-server
+  repo: lemaiwo/btp-sap-odata-to-mcp-server
+  typ: community
+  herkunft: lemaiwo
+  transport: http
+  auth: XSUAA / BTP-Destinations
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 138
+  zuletzt_aktiv: 2026-05-22
+  archiviert: false
+  hinweis: Läuft auf SAP BTP Cloud Foundry und erkennt OData-Dienste über BTP-Destinations.
+  quelle: https://github.com/lemaiwo/btp-sap-odata-to-mcp-server
+  geprueft_am: 2026-10-19
+- name: mcp-sap-gui
+  kategorie: ERP
+  system: SAP GUI für Windows
+  url: https://github.com/mario-andreschak/mcp-sap-gui
+  repo: mario-andreschak/mcp-sap-gui
+  typ: community
+  herkunft: mario-andreschak
+  transport: stdio
+  auth: SAP-GUI-Anmeldung
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Python
+  sterne: 141
+  zuletzt_aktiv: 2026-09-24
+  archiviert: false
+  hinweis: Steuert SAP GUI per Scripting; nur Windows, SAP-GUI-Scripting muss serverseitig erlaubt sein.
+  quelle: https://github.com/mario-andreschak/mcp-sap-gui
+  geprueft_am: 2026-10-19
+- name: sapgui.mcp
+  kategorie: ERP
+  system: SAP GUI für Windows
+  url: https://github.com/Hochfrequenz/sapgui.mcp
+  repo: Hochfrequenz/sapgui.mcp
+  typ: community
+  herkunft: Hochfrequenz
+  transport: beides
+  auth: SAP-GUI-Anmeldung
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Python
+  sterne: 12
+  zuletzt_aktiv: 2026-10-15
+  archiviert: false
+  hinweis: SAP-GUI-Automatisierung über Scripting; nur Windows.
+  quelle: https://github.com/Hochfrequenz/sapgui.mcp
+  geprueft_am: 2026-10-19
+- name: SAP Business One MCP Server by CData
+  kategorie: ERP
+  system: SAP Business One
+  url: https://github.com/CDataSoftware/sap-business-one-mcp-server-by-cdata
+  repo: CDataSoftware/sap-business-one-mcp-server-by-cdata
+  typ: kommerziell
+  herkunft: CData Software
+  transport: stdio
+  auth: Zugangsdaten im CData-JDBC-Treiber
+  zugriff: lesen
+  lizenz: MIT
+  sprache: Java
+  sterne: 18
+  zuletzt_aktiv: 2025-10-18
+  archiviert: false
+  hinweis: Der Server selbst ist MIT-lizenziert und nur lesend, benötigt aber den kostenpflichtigen CData-JDBC-Treiber.
+  quelle: https://github.com/CDataSoftware/sap-business-one-mcp-server-by-cdata
+  geprueft_am: 2026-10-19
+- name: Business Central MCP (WebUI)
+  kategorie: ERP
+  system: Microsoft Dynamics 365 Business Central
+  url: https://github.com/SShadowS/business-central-mcp
+  repo: SShadowS/business-central-mcp
+  typ: community
+  herkunft: SShadowS
+  transport: beides
+  auth: BC-Benutzer (On-Premise) oder Entra ID
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 45
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Arbeitet über das Protokoll des BC-Webclients statt über die Standard-API; Massenabfragen über OData API v2.0.
+  quelle: https://github.com/SShadowS/business-central-mcp
+  geprueft_am: 2026-10-19
+- name: Dynamics 365 ERP MCP Server
+  kategorie: ERP
+  system: Microsoft Dynamics 365 Finance und Supply Chain Management
+  url: https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp
+  typ: offiziell
+  herkunft: Microsoft
+  transport: remote-gehostet
+  auth: OAuth (Microsoft Entra ID), Client muss unter "Allowed MCP clients" freigegeben sein
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Ab Version 10.0.47 (oder 10.0.46 PQU-2, 10.0.45 PQU-7), Umgebungen ab Tier 2. Data-, Form- und Action-Tools. Den älteren statischen Server hat Microsoft zum 01.10.2026 abgekündigt; die Doku formulierte das am 19.10.2026 noch als Ankündigung.
+  quelle: https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/copilot/copilot-mcp
+  geprueft_am: 2026-10-19
+- name: mcp-odoo
+  kategorie: ERP
+  system: Odoo
+  url: https://github.com/erpipe-org/mcp-odoo
+  repo: erpipe-org/mcp-odoo
+  typ: community
+  herkunft: erpipe-org
+  transport: beides
+  auth: Odoo-Benutzer oder API-Schlüssel
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Python
+  sterne: 424
+  zuletzt_aktiv: 2026-08-25
+  archiviert: false
+  hinweis: Über XML-RPC für ältere Odoo-Versionen nutzbar. Schreibzugriffe lassen sich absichern. Früher unter tuanle96/mcp-odoo.
+  quelle: https://github.com/erpipe-org/mcp-odoo
+  geprueft_am: 2026-10-19
+- name: odoo-mcp-pro
+  kategorie: ERP
+  system: Odoo
+  url: https://github.com/pantalytics/odoo-mcp-pro
+  repo: pantalytics/odoo-mcp-pro
+  typ: community
+  herkunft: pantalytics
+  transport: beides
+  auth: API-Schlüssel oder OAuth
+  zugriff: lesen-schreiben
+  lizenz: Elastic-2.0
+  sprache: Python
+  sterne: 87
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Elastic License 2.0, keine OSI-Lizenz; Betrieb als Dienst für Dritte untersagt. Der Anbieter bietet zusätzlich eine gehostete Variante an.
+  quelle: https://github.com/pantalytics/odoo-mcp-pro
+  geprueft_am: 2026-10-19
+- name: odoo-mcp-19
+  kategorie: ERP
+  system: Odoo 19
+  url: https://github.com/AlanOgic/odoo-mcp-19
+  repo: AlanOgic/odoo-mcp-19
+  typ: community
+  herkunft: AlanOgic
+  transport: beides
+  auth: API-Schlüssel
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Python
+  sterne: 11
+  zuletzt_aktiv: 2026-10-05
+  archiviert: false
+  hinweis: Nutzt die JSON-2-API von Odoo 19. Schreibende Aufrufe laufen über eine Freigabe; eine reine Leserolle ist einstellbar.
+  quelle: https://github.com/AlanOgic/odoo-mcp-19
+  geprueft_am: 2026-10-19
+- name: weclapp MCP
+  kategorie: ERP
+  system: weclapp
+  url: https://github.com/codelev/weclapp-mcp
+  repo: codelev/weclapp-mcp
+  typ: community
+  herkunft: codelev
+  transport: stdio
+  auth: weclapp-API-Token
+  zugriff: lesen-schreiben
+  lizenz: SSPL-1.0
+  sprache: Python
+  sterne: 2
+  zuletzt_aktiv: 2026-05-06
+  archiviert: false
+  hinweis: SSPL, keine OSI-Lizenz. Verwaltet Firmen und Personen (Parteien) in weclapp.
+  quelle: https://github.com/codelev/weclapp-mcp
+  geprueft_am: 2026-10-19
+- name: weclapp MCP Server (kochfreiburg)
+  kategorie: ERP
+  system: weclapp
+  url: https://github.com/kochfreiburg/weclapp-mcp-server
+  repo: kochfreiburg/weclapp-mcp-server
+  typ: community
+  herkunft: kochfreiburg
+  transport: http
+  auth: weclapp-API-Token
+  zugriff: lesen-schreiben
+  lizenz: AGPL-3.0
+  sprache: JavaScript
+  sterne: 0
+  zuletzt_aktiv: 2026-10-09
+  archiviert: false
+  hinweis: Betrieb als Container vorgesehen.
+  quelle: https://github.com/kochfreiburg/weclapp-mcp-server
+  geprueft_am: 2026-10-19
+- name: Xentral MCP Server (kochfreiburg)
+  kategorie: ERP
+  system: Xentral
+  url: https://github.com/kochfreiburg/xentral-mcp-server
+  repo: kochfreiburg/xentral-mcp-server
+  typ: community
+  herkunft: kochfreiburg
+  transport: http
+  auth: Xentral-API-Token
+  zugriff: lesen-schreiben
+  lizenz: AGPL-3.0
+  sprache: JavaScript
+  sterne: 0
+  zuletzt_aktiv: 2026-09-26
+  archiviert: false
+  hinweis: Betrieb als Container vorgesehen.
+  quelle: https://github.com/kochfreiburg/xentral-mcp-server
+  geprueft_am: 2026-10-19
+- name: xentral-mcp (matthiashuebner)
+  kategorie: ERP
+  system: Xentral
+  url: https://github.com/matthiashuebner/xentral-mcp
+  repo: matthiashuebner/xentral-mcp
+  typ: community
+  herkunft: matthiashuebner
+  transport: stdio
+  auth: Xentral-API-Token
+  zugriff: lesen-schreiben
+  lizenz: keine
+  sprache: Python
+  sterne: 0
+  zuletzt_aktiv: 2026-08-17
+  archiviert: false
+  hinweis: Zugriff über die Xentral-API.
+  quelle: https://github.com/matthiashuebner/xentral-mcp
+  geprueft_am: 2026-10-19
+- name: xentral-mcp (mjmirza)
+  kategorie: ERP
+  system: Xentral
+  url: https://github.com/mjmirza/xentral-mcp
+  repo: mjmirza/xentral-mcp
+  typ: community
+  herkunft: mjmirza
+  transport: beides
+  auth: Xentral-API-Token
+  zugriff: lesen-schreiben
+  lizenz: LicenseRef-OpenRoots-Agent-2.3
+  sprache: TypeScript
+  sterne: 1
+  zuletzt_aktiv: 2026-08-28
+  archiviert: true
+  hinweis: Eigene Lizenz, vor dem Einsatz prüfen. Standardmäßig nur lesend, Schreibzugriffe einzeln freischaltbar.
+  quelle: https://github.com/mjmirza/xentral-mcp
+  geprueft_am: 2026-10-19
+# ---------------------------------------------------------------- Buchhaltung und Steuern
+- name: GetMyInvoices MCP
+  kategorie: Buchhaltung und Steuern
+  system: GetMyInvoices
+  url: https://api.getmyinvoices.com/accounts/mcp-v1/public/index.php
+  typ: offiziell
+  herkunft: GetMyInvoices
+  transport: remote-gehostet
+  auth: GetMyInvoices-Konto
+  zugriff: lesen
+  lizenz: proprietär
+  hinweis: Zugriff auf Belege und Rechnungen im GetMyInvoices-Konto, nur lesend.
+  quelle: https://sites.getmyinvoices.com/en/mcp/
+  geprueft_am: 2026-10-19
+- name: Candis Developer MCP
+  kategorie: Buchhaltung und Steuern
+  system: Candis
+  url: https://developer.candis.io/mcp
+  typ: offiziell
+  herkunft: Candis
+  transport: remote-gehostet
+  auth: keine
+  zugriff: lesen
+  lizenz: proprietär
+  hinweis: Nur API-Dokumentation für Entwickler, kein Zugriff auf Belegdaten.
+  quelle: https://developer.candis.io/page/mcp-server
+  geprueft_am: 2026-10-19
+- name: datev-mcp-server
+  kategorie: Buchhaltung und Steuern
+  system: DATEV
+  url: https://github.com/ppronobis/datev-mcp-server
+  repo: ppronobis/datev-mcp-server
+  typ: community
+  herkunft: ppronobis
+  transport: stdio
+  auth: keine
+  zugriff: lesen
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 5
+  zuletzt_aktiv: 2026-03-28
+  archiviert: false
+  hinweis: Kein Produkt der DATEV eG. Wertet lokale Buchungsdaten im DATEV-Format (EXTF) aus, zum Beispiel Salden und offene Posten; keine Verbindung zu DATEV.
+  quelle: https://github.com/ppronobis/datev-mcp-server
+  geprueft_am: 2026-10-19
+- name: datev-mcp
+  kategorie: Buchhaltung und Steuern
+  system: DATEV
+  url: https://github.com/BadRix90/datev-mcp
+  repo: BadRix90/datev-mcp
+  typ: community
+  herkunft: BadRix90
+  transport: beides
+  auth: DATEV-OAuth
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Python
+  sterne: 2
+  zuletzt_aktiv: 2026-07-27
+  archiviert: false
+  hinweis: Kein Produkt der DATEV eG. Für die DATEV-APIs ist eine Registrierung im DATEV-Entwicklerportal nötig.
+  quelle: https://github.com/BadRix90/datev-mcp
+  geprueft_am: 2026-10-19
+- name: datev-extf-mcp
+  kategorie: Buchhaltung und Steuern
+  system: DATEV-Format (EXTF)
+  url: https://github.com/seamless-engineering/datev-extf-mcp
+  repo: seamless-engineering/datev-extf-mcp
+  typ: community
+  herkunft: seamless-engineering
+  transport: stdio
+  auth: keine
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 0
+  zuletzt_aktiv: 2026-09-26
+  archiviert: false
+  hinweis: Arbeitet nur mit Dateien. Validiert und schreibt Buchungsstapel im DATEV-Format (EXTF), ohne Verbindung zu DATEV.
+  quelle: https://github.com/seamless-engineering/datev-extf-mcp
+  geprueft_am: 2026-10-19
+- name: belege.ai MCP
+  kategorie: Buchhaltung und Steuern
+  system: belege.ai
+  url: https://belege.ai/mcp-buchhaltung
+  typ: kommerziell
+  herkunft: belege.ai
+  transport: remote-gehostet
+  auth: belege.ai-Konto
+  zugriff: lesen
+  lizenz: proprietär
+  hinweis: Gehosteter Dienst rund um Belege und Buchhaltungsdaten, nur lesend.
+  quelle: https://belege.ai/mcp-buchhaltung
+  geprueft_am: 2026-10-19
+- name: mcp-lexware-office
+  kategorie: Buchhaltung und Steuern
+  system: Lexware Office (ehemals lexoffice)
+  url: https://github.com/JannikWempe/mcp-lexware-office
+  repo: JannikWempe/mcp-lexware-office
+  typ: community
+  herkunft: JannikWempe
+  transport: stdio
+  auth: Lexware-API-Schlüssel
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 69
+  zuletzt_aktiv: 2026-10-15
+  archiviert: false
+  hinweis: Standardmäßig nur lesend; Schreiben erst nach Freigabe per Umgebungsvariable. Zwei Tools (search, execute) statt eines Tools je Endpunkt.
+  quelle: https://github.com/JannikWempe/mcp-lexware-office
+  geprueft_am: 2026-10-19
+- name: Lexware MCP Server (marselsel)
+  kategorie: Buchhaltung und Steuern
+  system: Lexware Office (ehemals lexoffice)
+  url: https://github.com/marselsel/Lexware-MCP-Server
+  repo: marselsel/Lexware-MCP-Server
+  typ: community
+  herkunft: marselsel
+  transport: beides
+  auth: Lexware-API-Schlüssel, für HTTP zusätzlich OAuth 2.1
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 42
+  zuletzt_aktiv: 2026-10-01
+  archiviert: false
+  hinweis: Belege werden als Entwurf angelegt; LEXWARE_READ_ONLY=true erzwingt reinen Lesezugriff.
+  quelle: https://github.com/marselsel/Lexware-MCP-Server
+  geprueft_am: 2026-10-19
+- name: lexware-mcp-server (lazyants)
+  kategorie: Buchhaltung und Steuern
+  system: Lexware Office (ehemals lexoffice)
+  url: https://github.com/lazyants/lexware-mcp-server
+  repo: lazyants/lexware-mcp-server
+  typ: community
+  herkunft: lazyants
+  transport: stdio
+  auth: Lexware-API-Schlüssel
+  zugriff: lesen-schreiben
+  lizenz: FSL-1.1-MIT
+  sprache: TypeScript
+  sterne: 8
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Functional Source License, erst nach zwei Jahren MIT. Zugriff über die Lexware-Office-API.
+  quelle: https://github.com/lazyants/lexware-mcp-server
+  geprueft_am: 2026-10-19
+- name: lexware-mcp-community
+  kategorie: Buchhaltung und Steuern
+  system: Lexware Office (ehemals lexoffice)
+  url: https://github.com/lepatrick/lexware-mcp-community
+  repo: lepatrick/lexware-mcp-community
+  typ: community
+  herkunft: lepatrick
+  transport: stdio
+  auth: Lexware-API-Schlüssel
+  zugriff: lesen-schreiben
+  lizenz: AGPL-3.0
+  sprache: TypeScript
+  sterne: 0
+  zuletzt_aktiv: 2026-09-02
+  archiviert: false
+  hinweis: Läuft nur lokal über stdio, ohne HTTP-Port und ohne OAuth. Dokumentation auf Deutsch.
+  quelle: https://github.com/lepatrick/lexware-mcp-community
+  geprueft_am: 2026-10-19
+- name: mcp-sevdesk
+  kategorie: Buchhaltung und Steuern
+  system: sevdesk
+  url: https://github.com/nikolausm/mcp-sevdesk
+  repo: nikolausm/mcp-sevdesk
+  typ: community
+  herkunft: nikolausm
+  transport: stdio
+  auth: sevdesk-API-Token
+  zugriff: lesen-schreiben
+  lizenz: keine
+  sprache: TypeScript
+  sterne: 28
+  zuletzt_aktiv: 2026-10-15
+  archiviert: false
+  hinweis: Legt unter anderem Kontakte, Artikel und Transaktionen an.
+  quelle: https://github.com/nikolausm/mcp-sevdesk
+  geprueft_am: 2026-10-19
+- name: sevdesk-mcp (joosthel)
+  kategorie: Buchhaltung und Steuern
+  system: sevdesk
+  url: https://github.com/joosthel/sevdesk-mcp
+  repo: joosthel/sevdesk-mcp
+  typ: community
+  herkunft: joosthel
+  transport: beides
+  auth: sevdesk-API-Token
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 6
+  zuletzt_aktiv: 2026-08-20
+  archiviert: false
+  hinweis: Kennzeichnet lesende und schreibende Tools getrennt.
+  quelle: https://github.com/joosthel/sevdesk-mcp
+  geprueft_am: 2026-10-19
+- name: sevdesk-mcp (codestra)
+  kategorie: Buchhaltung und Steuern
+  system: sevdesk
+  url: https://github.com/codestra/sevdesk-mcp
+  repo: codestra/sevdesk-mcp
+  typ: community
+  herkunft: codestra
+  transport: stdio
+  auth: sevdesk-API-Token
+  zugriff: lesen-schreiben
+  lizenz: keine
+  sprache: TypeScript
+  sterne: 6
+  zuletzt_aktiv: 2026-08-10
+  archiviert: false
+  hinweis: Zugriff über die sevdesk-API.
+  quelle: https://github.com/codestra/sevdesk-mcp
+  geprueft_am: 2026-10-19
+- name: Buchhaltungsbutler-MCP (ohneben)
+  kategorie: Buchhaltung und Steuern
+  system: BuchhaltungsButler
+  url: https://github.com/ohneben/Buchhaltungsbutler-MCP
+  repo: ohneben/Buchhaltungsbutler-MCP
+  typ: community
+  herkunft: ohneben
+  transport: beides
+  auth: BuchhaltungsButler-API-Schlüssel
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 9
+  zuletzt_aktiv: 2026-10-06
+  archiviert: false
+  hinweis: Tools sind nach lesend, schreibend und destruktiv gekennzeichnet (MCP-Annotationen). Dokumentation auf Deutsch.
+  quelle: https://github.com/ohneben/Buchhaltungsbutler-MCP
+  geprueft_am: 2026-10-19
+- name: buchhaltungsbutler-mcp (mrvnklm)
+  kategorie: Buchhaltung und Steuern
+  system: BuchhaltungsButler
+  url: https://github.com/mrvnklm/buchhaltungsbutler-mcp
+  repo: mrvnklm/buchhaltungsbutler-mcp
+  typ: community
+  herkunft: mrvnklm
+  transport: stdio
+  auth: BuchhaltungsButler-API-Schlüssel
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 1
+  zuletzt_aktiv: 2026-10-15
+  archiviert: false
+  hinweis: Legt auch Bankkonten und Transaktionen an.
+  quelle: https://github.com/mrvnklm/buchhaltungsbutler-mcp
+  geprueft_am: 2026-10-19
+- name: buchhaltungsbutler-mcp (dennismenken)
+  kategorie: Buchhaltung und Steuern
+  system: BuchhaltungsButler
+  url: https://github.com/dennismenken/buchhaltungsbutler-mcp
+  repo: dennismenken/buchhaltungsbutler-mcp
+  typ: community
+  herkunft: dennismenken
+  transport: beides
+  auth: BuchhaltungsButler-API-Schlüssel
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 0
+  zuletzt_aktiv: 2026-10-12
+  archiviert: false
+  hinweis: Lese- und Schreibmodus getrennt einstellbar.
+  quelle: https://github.com/dennismenken/buchhaltungsbutler-mcp
+  geprueft_am: 2026-10-19
+- name: elster-mcp-server (lukasschwarz)
+  kategorie: Buchhaltung und Steuern
+  system: ELSTER
+  url: https://github.com/lukasschwarz/elster-mcp-server
+  repo: lukasschwarz/elster-mcp-server
+  typ: community
+  herkunft: lukasschwarz
+  transport: stdio
+  auth: ELSTER-Zertifikat
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 22
+  zuletzt_aktiv: 2026-07-13
+  archiviert: false
+  hinweis: Kein Angebot der Finanzverwaltung. Steuert das ELSTER-Webportal per Puppeteer statt über ERiC; das README weist darauf hin, dass die Nutzungsbedingungen automatisierte Zugriffe einschränken können. Abruf- und Postfach-Tools sind lesend.
+  quelle: https://github.com/lukasschwarz/elster-mcp-server
+  geprueft_am: 2026-10-19
+- name: elster-mcp-server (Infraviored)
+  kategorie: Buchhaltung und Steuern
+  system: ELSTER
+  url: https://github.com/Infraviored/elster-mcp-server
+  repo: Infraviored/elster-mcp-server
+  typ: community
+  herkunft: Infraviored
+  transport: stdio
+  auth: ELSTER-Zertifikat
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 2
+  zuletzt_aktiv: 2026-10-04
+  archiviert: false
+  hinweis: Kein Angebot der Finanzverwaltung. Füllt Formulare im ELSTER-Webportal aus und führt die Portal-Prüfungen aus; das Absenden bleibt beim Menschen im Browser.
+  quelle: https://github.com/Infraviored/elster-mcp-server
+  geprueft_am: 2026-10-19
+# ---------------------------------------------------------------- E-Rechnung
+- name: e-rechnung (erechnung-mcp)
+  kategorie: E-Rechnung
+  system: XRechnung und ZUGFeRD
+  url: https://github.com/pexon-consulting/e-rechnung
+  repo: pexon-consulting/e-rechnung
+  typ: community
+  herkunft: pexon-consulting
+  transport: stdio
+  auth: keine
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Python
+  sterne: 0
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Projekt der Maintainer dieser Liste. Python-Bibliothek mit MCP-Server als Extra (erechnung-mcp). Liest und validiert XRechnung und ZUGFeRD mit den KoSIT-Regeln ohne Java und erzeugt Rechnungsdateien lokal.
+  quelle: https://github.com/pexon-consulting/e-rechnung
+  geprueft_am: 2026-10-19
+- name: xrechnung-mcp
+  kategorie: E-Rechnung
+  system: XRechnung
+  url: https://github.com/Ozycore/xrechnung-mcp
+  repo: Ozycore/xrechnung-mcp
+  typ: community
+  herkunft: Ozycore
+  transport: stdio
+  auth: keine
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 1
+  zuletzt_aktiv: 2026-10-02
+  archiviert: false
+  hinweis: Das Repository spiegelt den Quelltext des npm-Pakets.
+  quelle: https://github.com/Ozycore/xrechnung-mcp
+  geprueft_am: 2026-10-19
+- name: einvoice-mcp (Mavengence)
+  kategorie: E-Rechnung
+  system: XRechnung und ZUGFeRD
+  url: https://github.com/Mavengence/einvoice-mcp
+  repo: Mavengence/einvoice-mcp
+  typ: community
+  herkunft: Mavengence
+  transport: beides
+  auth: keine
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Python
+  sterne: 1
+  zuletzt_aktiv: 2026-03-02
+  archiviert: false
+  hinweis: Erzeugt und validiert E-Rechnungen; Betrieb auch als Container.
+  quelle: https://github.com/Mavengence/einvoice-mcp
+  geprueft_am: 2026-10-19
+- name: einvoice-mcp (makririch)
+  kategorie: E-Rechnung
+  system: XRechnung
+  url: https://github.com/makririch/einvoice-mcp
+  repo: makririch/einvoice-mcp
+  typ: community
+  herkunft: makririch
+  transport: stdio
+  auth: keine
+  zugriff: lesen-schreiben
+  lizenz: keine
+  sprache: TypeScript
+  sterne: 2
+  zuletzt_aktiv: 2026-04-13
+  archiviert: false
+  hinweis: Erzeugt XRechnung im UBL-Format aus strukturierten Daten.
+  quelle: https://github.com/makririch/einvoice-mcp
+  geprueft_am: 2026-10-19
+- name: einvoicechecker-mcp
+  kategorie: E-Rechnung
+  system: XRechnung und ZUGFeRD
+  url: https://github.com/vpukhalskyi/einvoicechecker-mcp
+  repo: vpukhalskyi/einvoicechecker-mcp
+  typ: community
+  herkunft: vpukhalskyi
+  transport: beides
+  auth: API-Schlüssel für den gehosteten Dienst
+  zugriff: lesen
+  lizenz: MIT
+  sterne: 0
+  zuletzt_aktiv: 2026-10-14
+  archiviert: false
+  hinweis: Validierung von E-Rechnungen. Zusätzlich als gehosteter Endpunkt einvoicechecker.com/v1/mcp; Rechnungsdaten gehen dann an einen externen Dienst.
+  quelle: https://github.com/vpukhalskyi/einvoicechecker-mcp
+  geprueft_am: 2026-10-19
+- name: eleata-einvoice-mcp
+  kategorie: E-Rechnung
+  system: E-Rechnung (EN 16931)
+  url: https://github.com/eleata/eleata-einvoice-mcp
+  repo: eleata/eleata-einvoice-mcp
+  typ: community
+  herkunft: eleata
+  transport: stdio
+  auth: API-Schlüssel für den gehosteten Dienst
+  zugriff: lesen
+  lizenz: keine
+  sprache: JavaScript
+  sterne: 0
+  zuletzt_aktiv: 2026-06-30
+  archiviert: false
+  hinweis: Validiert über die gehostete eleata-API, Rechnungsdaten gehen an diesen Dienst; Fehlercode-Referenz offline. Früher unter hernaninverso/eleata-einvoice-mcp.
+  quelle: https://github.com/eleata/eleata-einvoice-mcp
+  geprueft_am: 2026-10-19
+# ---------------------------------------------------------------- CRM und Vertrieb
+- name: HubSpot MCP Server (remote)
+  kategorie: CRM und Vertrieb
+  system: HubSpot
+  url: https://mcp.hubspot.com
+  typ: offiziell
+  herkunft: HubSpot
+  transport: remote-gehostet
+  auth: OAuth mit PKCE über einen MCP Connector im HubSpot-Account (Client-ID und Secret), ohne DCR
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Kein Löschen von Datensätzen. Mit aktivierter Einstellung für sensible Daten sind Aktivitäten und Konversationen gesperrt.
+  quelle: https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server
+  geprueft_am: 2026-10-19
+- name: HubSpot Developer MCP Server
+  kategorie: CRM und Vertrieb
+  system: HubSpot Developer Platform
+  url: https://developers.hubspot.com/mcp
+  typ: offiziell
+  herkunft: HubSpot
+  transport: stdio
+  auth: HubSpot-CLI-Anmeldung
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Entwicklungswerkzeug über die HubSpot-CLI (hs mcp setup), nicht für CRM-Daten. Das ältere npm-Paket @hubspot/mcp-server endet bei Version 0.4.0.
+  quelle: https://developers.hubspot.com/mcp
+  geprueft_am: 2026-10-19
+- name: Salesforce Hosted MCP Servers
+  kategorie: CRM und Vertrieb
+  system: Salesforce
+  url: https://api.salesforce.com/platform/mcp/v1/
+  typ: offiziell
+  herkunft: Salesforce
+  transport: remote-gehostet
+  auth: OAuth mit PKCE über External Client App
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Allgemein verfügbar seit 29.04.2026, ab Enterprise Edition.
+  quelle: https://developer.salesforce.com/blogs/2026/04/salesforce-hosted-mcp-servers-are-now-generally-available
+  geprueft_am: 2026-10-19
+- name: Salesforce DX MCP Server
+  kategorie: CRM und Vertrieb
+  system: Salesforce (Entwicklung)
+  url: https://github.com/salesforcecli/mcp
+  repo: salesforcecli/mcp
+  typ: offiziell
+  herkunft: Salesforce
+  transport: stdio
+  auth: Salesforce-CLI-Anmeldung
+  zugriff: lesen-schreiben
+  lizenz: Apache-2.0
+  sprache: TypeScript
+  sterne: 485
+  zuletzt_aktiv: 2026-10-05
+  archiviert: false
+  hinweis: Entwicklungswerkzeug. Laut Salesforce Supportende am 02.11.2026.
+  quelle: https://github.com/salesforcecli/mcp
+  geprueft_am: 2026-10-19
+- name: Pipedrive MCP Server
+  kategorie: CRM und Vertrieb
+  system: Pipedrive
+  url: https://mcp.pipedrive.ai/mcp
+  typ: offiziell
+  herkunft: Pipedrive
+  transport: remote-gehostet
+  auth: OAuth
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Seit 30.06.2026 in allen Tarifen verfügbar.
+  quelle: https://www.pipedrive.com/en/newsroom/pipedrive-launches-native-mcp-server-bringing-crm-workflows-directly-into-ai-assistants
+  geprueft_am: 2026-10-19
+- name: Dynamics 365 Sales MCP Server
+  kategorie: CRM und Vertrieb
+  system: Microsoft Dynamics 365 Sales
+  url: https://learn.microsoft.com/en-us/dynamics365/sales/connect-agents-to-model-context-protocol
+  typ: offiziell
+  herkunft: Microsoft
+  transport: remote-gehostet
+  auth: OAuth (Microsoft Entra ID)
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Läuft über Agent 365; Endpunkt je Umgebung.
+  quelle: https://learn.microsoft.com/en-us/dynamics365/sales/connect-agents-to-model-context-protocol
+  geprueft_am: 2026-10-19
+- name: Dataverse MCP Server
+  kategorie: CRM und Vertrieb
+  system: Microsoft Dataverse / Dynamics 365
+  url: https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-mcp
+  typ: offiziell
+  herkunft: Microsoft
+  transport: beides
+  auth: OAuth (Microsoft Entra ID)
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Endpunkt /api/mcp der eigenen Umgebung, lokal über den Proxy @microsoft/dataverse. Außerhalb von Copilot Studio werden seit 15.12.2025 Copilot Credits berechnet.
+  quelle: https://learn.microsoft.com/en-us/power-apps/maker/data-platform/data-platform-mcp
+  geprueft_am: 2026-10-19
+- name: mcp-server-salesforce
+  kategorie: CRM und Vertrieb
+  system: Salesforce
+  url: https://github.com/tsmztech/mcp-server-salesforce
+  repo: tsmztech/mcp-server-salesforce
+  typ: community
+  herkunft: tsmztech
+  transport: stdio
+  auth: Benutzer/Token oder OAuth
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 165
+  zuletzt_aktiv: 2026-10-17
+  archiviert: false
+  hinweis: Abfragen, Datensätze und Metadaten bis hin zu Apex.
+  quelle: https://github.com/tsmztech/mcp-server-salesforce
+  geprueft_am: 2026-10-19
+- name: salesforce-mcp-server (advancedcommunities)
+  kategorie: CRM und Vertrieb
+  system: Salesforce
+  url: https://github.com/advancedcommunities/salesforce-mcp-server
+  repo: advancedcommunities/salesforce-mcp-server
+  typ: community
+  herkunft: advancedcommunities
+  transport: stdio
+  auth: Salesforce-CLI-Anmeldung
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 37
+  zuletzt_aktiv: 2026-10-14
+  archiviert: false
+  hinweis: Nur-Lese-Modus je Org einstellbar.
+  quelle: https://github.com/advancedcommunities/salesforce-mcp-server
+  geprueft_am: 2026-10-19
+- name: hubspot-mcp (shinzo-labs)
+  kategorie: CRM und Vertrieb
+  system: HubSpot
+  url: https://github.com/shinzo-labs/hubspot-mcp
+  repo: shinzo-labs/hubspot-mcp
+  typ: community
+  herkunft: shinzo-labs
+  transport: beides
+  auth: Private-App-Token
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: JavaScript
+  sterne: 35
+  zuletzt_aktiv: 2025-11-25
+  archiviert: false
+  hinweis: Deckt CRM-Objekte, Zuordnungen und Batch-Operationen ab.
+  quelle: https://github.com/shinzo-labs/hubspot-mcp
+  geprueft_am: 2026-10-19
+- name: hubspot-mcp (promptmetrics)
+  kategorie: CRM und Vertrieb
+  system: HubSpot
+  url: https://github.com/promptmetrics/hubspot-mcp
+  repo: promptmetrics/hubspot-mcp
+  typ: community
+  herkunft: promptmetrics
+  transport: stdio
+  auth: OAuth oder Private-App-Token
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Python
+  sterne: 3
+  zuletzt_aktiv: 2026-10-03
+  archiviert: false
+  hinweis: Ordner skills/ unter Apache-2.0. Jeder Schreibzugriff braucht eine Freigabe und wird mit Rücksprungpunkt protokolliert.
+  quelle: https://github.com/promptmetrics/hubspot-mcp
+  geprueft_am: 2026-10-19
+- name: pipedrive-mcp-server (WillDent)
+  kategorie: CRM und Vertrieb
+  system: Pipedrive
+  url: https://github.com/WillDent/pipedrive-mcp-server
+  repo: WillDent/pipedrive-mcp-server
+  typ: community
+  herkunft: WillDent
+  transport: beides
+  auth: Pipedrive-API-Token
+  zugriff: lesen
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 60
+  zuletzt_aktiv: 2026-07-21
+  archiviert: false
+  hinweis: Standardmäßig nur lesend; zwei eng begrenzte Schreib-Tools optional.
+  quelle: https://github.com/WillDent/pipedrive-mcp-server
+  geprueft_am: 2026-10-19
+- name: pipedrive-mcp-server (ckalima)
+  kategorie: CRM und Vertrieb
+  system: Pipedrive
+  url: https://github.com/ckalima/pipedrive-mcp-server
+  repo: ckalima/pipedrive-mcp-server
+  typ: community
+  herkunft: ckalima
+  transport: beides
+  auth: Pipedrive-API-Token
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 10
+  zuletzt_aktiv: 2026-10-18
+  archiviert: false
+  hinweis: Umfangreiche Schreib-Tools; Nur-Lese-Modus verfügbar.
+  quelle: https://github.com/ckalima/pipedrive-mcp-server
+  geprueft_am: 2026-10-19
+# ---------------------------------------------------------------- BI und Analytics
+- name: Power BI Modeling MCP Server
+  kategorie: BI und Analytics
+  system: Microsoft Power BI
+  url: https://github.com/microsoft/powerbi-modeling-mcp
+  repo: microsoft/powerbi-modeling-mcp
+  typ: offiziell
+  herkunft: Microsoft
+  transport: stdio
+  auth: Microsoft Entra ID
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sterne: 1233
+  zuletzt_aktiv: 2026-09-29
+  archiviert: false
+  hinweis: Bearbeitet semantische Modelle; Schalter --readonly verfügbar. Lizenzfeld MIT, das README verlangt zusätzlich die Annahme einer EULA. Nicht für macOS. Microsoft nennt ihn inzwischen Power BI Authoring MCP Server (lokal); das Paket heißt weiter powerbi-modeling-mcp.
+  quelle: https://learn.microsoft.com/en-us/power-bi/developer/mcp/mcp-servers-overview
+  geprueft_am: 2026-10-19
+- name: Power BI Authoring MCP (gehostet)
+  kategorie: BI und Analytics
+  system: Microsoft Power BI
+  url: https://api.fabric.microsoft.com/v1/mcp/powerbi/authoring
+  typ: offiziell
+  herkunft: Microsoft
+  transport: remote-gehostet
+  auth: OAuth (Microsoft Entra ID)
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Vorschau.
+  quelle: https://learn.microsoft.com/en-us/power-bi/developer/mcp/mcp-servers-overview
+  geprueft_am: 2026-10-19
+- name: Fabric IQ MCP
+  kategorie: BI und Analytics
+  system: Microsoft Fabric / Power BI
+  url: https://fabriciq.svc.cloud.microsoft/v1/mcp/FabricIQ
+  typ: offiziell
+  herkunft: Microsoft
+  transport: remote-gehostet
+  auth: OAuth (Microsoft Entra ID)
+  zugriff: lesen
+  lizenz: proprietär
+  hinweis: Abfragen auf Power-BI-Modelle, nur lesend. Die Abfragegenerierung braucht eine Copilot-Lizenz.
+  quelle: https://learn.microsoft.com/en-us/power-bi/developer/mcp/mcp-servers-overview
+  geprueft_am: 2026-10-19
+- name: Fabric Core MCP
+  kategorie: BI und Analytics
+  system: Microsoft Fabric
+  url: https://api.fabric.microsoft.com/v1/mcp/core
+  typ: offiziell
+  herkunft: Microsoft
+  transport: remote-gehostet
+  auth: OAuth (Microsoft Entra ID)
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Verwaltung von Arbeitsbereichen und Elementen über die Fabric-REST-API.
+  quelle: https://learn.microsoft.com/en-us/rest/api/fabric/articles/mcp-servers/what-is-fabric-mcp-server
+  geprueft_am: 2026-10-19
+- name: Fabric MCP Server (lokal)
+  kategorie: BI und Analytics
+  system: Microsoft Fabric
+  url: https://github.com/microsoft/mcp/tree/main/servers/Fabric.Mcp.Server
+  repo: microsoft/mcp
+  typ: offiziell
+  herkunft: Microsoft
+  transport: stdio
+  auth: Microsoft Entra ID
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: C#
+  sterne: 3787
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Öffentliche Vorschau für Entwickler. Sterne und Aktivität beziehen sich auf das Monorepo microsoft/mcp.
+  quelle: https://learn.microsoft.com/en-us/rest/api/fabric/articles/mcp-servers/what-is-fabric-mcp-server
+  geprueft_am: 2026-10-19
+- name: Tableau MCP
+  kategorie: BI und Analytics
+  system: Tableau
+  url: https://github.com/tableau/tableau-mcp
+  repo: tableau/tableau-mcp
+  typ: offiziell
+  herkunft: Tableau (Salesforce)
+  transport: beides
+  auth: Personal Access Token oder OAuth
+  zugriff: lesen
+  lizenz: Apache-2.0
+  sprache: TypeScript
+  sterne: 352
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Abfragen auf veröffentlichte Datenquellen und Inhalte von Tableau Cloud und Server.
+  quelle: https://github.com/tableau/tableau-mcp
+  geprueft_am: 2026-10-19
+- name: Qlik MCP Server
+  kategorie: BI und Analytics
+  system: Qlik Cloud
+  url: https://help.qlik.com/en-us/cloud-services/Subsystems/Hub/Content/Sense_Hub/QlikMCP/Connecting-Qlik-MCP-server.htm
+  typ: offiziell
+  herkunft: Qlik
+  transport: remote-gehostet
+  auth: OAuth (CIMD, DCR oder manuell)
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Allgemein verfügbar seit 10.02.2026. Endpunkt /api/ai/mcp des eigenen Tenants; muss von der Administration aktiviert werden.
+  quelle: https://help.qlik.com/en-us/cloud-services/Subsystems/Hub/Content/Sense_Hub/QlikMCP/Connecting-Qlik-MCP-server.htm
+  geprueft_am: 2026-10-19
+- name: horizun-pbi-mcp
+  kategorie: BI und Analytics
+  system: Microsoft Power BI
+  url: https://github.com/HorizunGroup/horizun-pbi-mcp
+  repo: HorizunGroup/horizun-pbi-mcp
+  typ: community
+  herkunft: HorizunGroup
+  transport: stdio
+  auth: Microsoft Entra ID
+  zugriff: lesen-schreiben
+  lizenz: Apache-2.0
+  sprache: Python
+  sterne: 30
+  zuletzt_aktiv: 2026-10-17
+  archiviert: false
+  hinweis: DAX-Abfragen und Modelländerungen; Schreibzugriffe auf das aktive Projektverzeichnis begrenzt.
+  quelle: https://github.com/HorizunGroup/horizun-pbi-mcp
+  geprueft_am: 2026-10-19
+- name: SAP Datasphere MCP
+  kategorie: BI und Analytics
+  system: SAP Datasphere
+  url: https://github.com/rahulsethi/SAPDatasphereMCP
+  repo: rahulsethi/SAPDatasphereMCP
+  typ: community
+  herkunft: rahulsethi
+  transport: beides
+  auth: OAuth (Datasphere)
+  zugriff: lesen
+  lizenz: BUSL-1.1
+  sprache: Python
+  sterne: 11
+  zuletzt_aktiv: 2026-07-01
+  archiviert: false
+  hinweis: Business Source License, keine OSI-Lizenz. Katalog, Abfragen und analytische Modelle; in Version 1.x ausdrücklich ohne Schreib-Tools.
+  quelle: https://github.com/rahulsethi/SAPDatasphereMCP
+  geprueft_am: 2026-10-19
+- name: qlik-mcp-server (arthurfantaci)
+  kategorie: BI und Analytics
+  system: Qlik Sense Enterprise
+  url: https://github.com/arthurfantaci/qlik-mcp-server
+  repo: arthurfantaci/qlik-mcp-server
+  typ: community
+  herkunft: arthurfantaci
+  transport: stdio
+  auth: Zertifikat (WebSocket zur Engine)
+  zugriff: lesen
+  lizenz: MIT
+  sprache: Python
+  sterne: 18
+  zuletzt_aktiv: 2025-09-28
+  archiviert: false
+  hinweis: Liest App-Metadaten, Kennzahlen und Skripte.
+  quelle: https://github.com/arthurfantaci/qlik-mcp-server
+  geprueft_am: 2026-10-19
+# ---------------------------------------------------------------- Datenbanken
+- name: MCP Toolbox for Databases
+  kategorie: Datenbanken
+  system: Google-Cloud-Datenbanken, PostgreSQL, MySQL, SQL Server und weitere
+  url: https://github.com/googleapis/mcp-toolbox
+  repo: googleapis/mcp-toolbox
+  typ: offiziell
+  herkunft: Google
+  transport: beides
+  auth: Datenbank-Zugangsdaten, optional OAuth
+  zugriff: lesen-schreiben
+  lizenz: Apache-2.0
+  sprache: Go
+  sterne: 16684
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Tools werden in einer YAML-Datei als feste SQL-Abfragen definiert. Früher unter googleapis/genai-toolbox.
+  quelle: https://github.com/googleapis/mcp-toolbox
+  geprueft_am: 2026-10-19
+- name: SQL MCP Server (Data API builder)
+  kategorie: Datenbanken
+  system: Microsoft SQL Server / Azure SQL
+  url: https://github.com/Azure/data-api-builder
+  repo: Azure/data-api-builder
+  typ: offiziell
+  herkunft: Microsoft
+  transport: http
+  auth: Datenbank-Zugangsdaten, optional Entra ID
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: C#
+  sterne: 1528
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Teil des Data API builder; Tabellen und Aktionen werden in der Konfiguration freigegeben.
+  quelle: https://learn.microsoft.com/en-us/azure/data-api-builder/mcp
+  geprueft_am: 2026-10-19
+- name: Azure Database for PostgreSQL MCP
+  kategorie: Datenbanken
+  system: PostgreSQL (Azure)
+  url: https://github.com/microsoft/postgres-mcp
+  repo: microsoft/postgres-mcp
+  typ: offiziell
+  herkunft: Microsoft
+  transport: stdio
+  auth: Entra ID oder Passwort
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sterne: 56
+  zuletzt_aktiv: 2026-09-04
+  archiviert: false
+  hinweis: Verbindungsprofile erlauben Schreib-Tools, solange access_mode nicht auf ro steht.
+  quelle: https://github.com/microsoft/postgres-mcp
+  geprueft_am: 2026-10-19
+- name: MySQL MCP Server (Oracle)
+  kategorie: Datenbanken
+  system: MySQL / HeatWave
+  url: https://github.com/oracle/mcp/tree/main/src/mysql-mcp-server
+  repo: oracle/mcp
+  typ: offiziell
+  herkunft: Oracle
+  transport: beides
+  auth: Datenbank-Zugangsdaten
+  zugriff: lesen-schreiben
+  lizenz: UPL-1.0
+  sprache: Python
+  sterne: 461
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Teil der Sammlung oracle/mcp; Sterne und Aktivität beziehen sich auf die Sammlung.
+  quelle: https://github.com/oracle/mcp
+  geprueft_am: 2026-10-19
+- name: SQLcl MCP Server
+  kategorie: Datenbanken
+  system: Oracle Database
+  url: https://docs.oracle.com/en/database/oracle/sql-developer-command-line/26.1/sqcug/sqlcl-mcp-server.html
+  typ: offiziell
+  herkunft: Oracle
+  transport: stdio
+  auth: gespeicherte SQLcl-Verbindungen
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: In SQLcl ab Version 25.2 enthalten, Start mit sql -mcp.
+  quelle: https://docs.oracle.com/en/database/oracle/sql-developer-command-line/26.1/sqcug/sqlcl-mcp-server.html
+  geprueft_am: 2026-10-19
+- name: MariaDB MCP Server
+  kategorie: Datenbanken
+  system: MariaDB
+  url: https://github.com/MariaDB/mcp
+  repo: MariaDB/mcp
+  typ: offiziell
+  herkunft: MariaDB
+  transport: beides
+  auth: Datenbank-Zugangsdaten
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Python
+  sterne: 209
+  zuletzt_aktiv: 2026-08-10
+  archiviert: false
+  hinweis: MCP_READ_ONLY erzwingt reine SELECT/SHOW/DESCRIBE-Abfragen. Optional Vektorsuche.
+  quelle: https://github.com/MariaDB/mcp
+  geprueft_am: 2026-10-19
+- name: PostgreSQL-Referenzserver (archiviert)
+  kategorie: Datenbanken
+  system: PostgreSQL
+  url: https://github.com/modelcontextprotocol/servers-archived/tree/main/src/postgres
+  repo: modelcontextprotocol/servers-archived
+  typ: community
+  herkunft: modelcontextprotocol
+  transport: stdio
+  auth: Verbindungs-URL
+  zugriff: lesen
+  lizenz: MIT
+  sprache: JavaScript
+  sterne: 305
+  zuletzt_aktiv: 2025-05-28
+  archiviert: true
+  hinweis: Früherer Referenzserver des MCP-Projekts; npm-Paket als veraltet markiert. Nur zur Einordnung gelistet.
+  quelle: https://github.com/modelcontextprotocol/servers-archived
+  geprueft_am: 2026-10-19
+- name: Postgres MCP Pro
+  kategorie: Datenbanken
+  system: PostgreSQL
+  url: https://github.com/crystaldba/postgres-mcp
+  repo: crystaldba/postgres-mcp
+  typ: community
+  herkunft: crystaldba
+  transport: beides
+  auth: Verbindungs-URL
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Python
+  sterne: 3407
+  zuletzt_aktiv: 2026-08-17
+  archiviert: false
+  hinweis: Eingeschränkter Modus nur lesend; zusätzlich Index- und Abfrageanalyse.
+  quelle: https://github.com/crystaldba/postgres-mcp
+  geprueft_am: 2026-10-19
+- name: pgEdge Postgres MCP
+  kategorie: Datenbanken
+  system: PostgreSQL
+  url: https://github.com/pgEdge/pgedge-postgres-mcp
+  repo: pgEdge/pgedge-postgres-mcp
+  typ: community
+  herkunft: pgEdge
+  transport: beides
+  auth: Benutzer- und Token-Anmeldung
+  zugriff: lesen
+  lizenz: PostgreSQL
+  sprache: Go
+  sterne: 239
+  zuletzt_aktiv: 2026-10-13
+  archiviert: false
+  hinweis: Abfragen laufen in Nur-Lese-Transaktionen, je Datenbank einstellbar.
+  quelle: https://github.com/pgEdge/pgedge-postgres-mcp
+  geprueft_am: 2026-10-19
+- name: mssql_mcp_server
+  kategorie: Datenbanken
+  system: Microsoft SQL Server
+  url: https://github.com/RichardHan/mssql_mcp_server
+  repo: RichardHan/mssql_mcp_server
+  typ: community
+  herkunft: RichardHan
+  transport: stdio
+  auth: SQL- oder Windows-Anmeldung
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Python
+  sterne: 397
+  zuletzt_aktiv: 2025-11-02
+  archiviert: false
+  hinweis: Führt beliebiges SQL aus; Rechte über den Datenbankbenutzer begrenzen.
+  quelle: https://github.com/RichardHan/mssql_mcp_server
+  geprueft_am: 2026-10-19
+- name: mssql-mcp (Aaronontheweb)
+  kategorie: Datenbanken
+  system: Microsoft SQL Server
+  url: https://github.com/Aaronontheweb/mssql-mcp
+  repo: Aaronontheweb/mssql-mcp
+  typ: community
+  herkunft: Aaronontheweb
+  transport: stdio
+  auth: Verbindungszeichenfolge
+  zugriff: lesen-schreiben
+  lizenz: Apache-2.0
+  sprache: C#
+  sterne: 158
+  zuletzt_aktiv: 2026-01-22
+  archiviert: false
+  hinweis: In .NET, Betrieb als Container. Das README beschreibt eine Nur-Lese-Rolle.
+  quelle: https://github.com/Aaronontheweb/mssql-mcp
+  geprueft_am: 2026-10-19
+- name: mssqlclient-mcp-server
+  kategorie: Datenbanken
+  system: Microsoft SQL Server
+  url: https://github.com/aadversteeg/mssqlclient-mcp-server
+  repo: aadversteeg/mssqlclient-mcp-server
+  typ: community
+  herkunft: aadversteeg
+  transport: stdio
+  auth: Verbindungszeichenfolge
+  zugriff: lesen
+  lizenz: MIT
+  sprache: C#
+  sterne: 43
+  zuletzt_aktiv: 2026-10-04
+  archiviert: false
+  hinweis: Standardmäßig nur lesende Tools; Ausführen von SQL lässt sich zusätzlich freigeben.
+  quelle: https://github.com/aadversteeg/mssqlclient-mcp-server
+  geprueft_am: 2026-10-19
+- name: mcp-server-mysql (benborla)
+  kategorie: Datenbanken
+  system: MySQL
+  url: https://github.com/benborla/mcp-server-mysql
+  repo: benborla/mcp-server-mysql
+  typ: community
+  herkunft: benborla
+  transport: beides
+  auth: Datenbank-Zugangsdaten, HTTP mit Bearer-Token
+  zugriff: lesen
+  lizenz: MIT
+  sprache: JavaScript
+  sterne: 2168
+  zuletzt_aktiv: 2026-07-27
+  archiviert: false
+  hinweis: Standardmäßig nur lesend, Schreibrechte je Schema per Umgebungsvariable.
+  quelle: https://github.com/benborla/mcp-server-mysql
+  geprueft_am: 2026-10-19
+- name: mysql_mcp_server (designcomputer)
+  kategorie: Datenbanken
+  system: MySQL
+  url: https://github.com/designcomputer/mysql_mcp_server
+  repo: designcomputer/mysql_mcp_server
+  typ: community
+  herkunft: designcomputer
+  transport: beides
+  auth: Datenbank-Zugangsdaten
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Python
+  sterne: 1399
+  zuletzt_aktiv: 2026-08-02
+  archiviert: false
+  hinweis: Führt SQL mit den Rechten des konfigurierten Benutzers aus.
+  quelle: https://github.com/designcomputer/mysql_mcp_server
+  geprueft_am: 2026-10-19
+- name: oracle-mcp-server (danielmeppiel)
+  kategorie: Datenbanken
+  system: Oracle Database
+  url: https://github.com/danielmeppiel/oracle-mcp-server
+  repo: danielmeppiel/oracle-mcp-server
+  typ: community
+  herkunft: danielmeppiel
+  transport: stdio
+  auth: Verbindungszeichenfolge
+  zugriff: lesen
+  lizenz: MIT
+  sprache: Python
+  sterne: 134
+  zuletzt_aktiv: 2025-08-22
+  archiviert: false
+  hinweis: Schema-Kontext und lesende Abfragen für große Oracle-Schemata.
+  quelle: https://github.com/danielmeppiel/oracle-mcp-server
+  geprueft_am: 2026-10-19
+- name: hana-mcp-server
+  kategorie: Datenbanken
+  system: SAP HANA
+  url: https://github.com/HatriGt/hana-mcp-server
+  repo: HatriGt/hana-mcp-server
+  typ: community
+  herkunft: HatriGt
+  transport: beides
+  auth: HANA-Benutzer
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: JavaScript
+  sterne: 71
+  zuletzt_aktiv: 2026-10-07
+  archiviert: false
+  hinweis: Schema-Erkundung und SQL-Abfragen auf SAP HANA und HANA Cloud.
+  quelle: https://github.com/HatriGt/hana-mcp-server
+  geprueft_am: 2026-10-19
+# ---------------------------------------------------------------- Personal (HR)
+- name: Personio MCP Server
+  kategorie: Personal (HR)
+  system: Personio
+  url: https://support.personio.de/hc/en-us/articles/38314656674333-Personio-MCP-server-Beta-access-overview
+  typ: offiziell
+  herkunft: Personio
+  transport: remote-gehostet
+  auth: OAuth (Client-ID aus den persönlichen Personio-Einstellungen, ohne Client-Secret)
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Beta, noch nicht für alle Konten. Endpunkt /mcp der eigenen Personio-Instanz. Liest Profile, Abwesenheiten, Vergütung und Performance; begrenzte Schreibaktionen wie Urlaubsanträge sind standardmäßig aus und separat einschaltbar. Admins können einzelne Tools und Personenattribute sperren.
+  quelle: https://support.personio.de/hc/en-us/articles/38314656674333-Personio-MCP-server-Beta-access-overview
+  geprueft_am: 2026-10-19
+- name: Factorial MCP Server
+  kategorie: Personal (HR)
+  system: Factorial
+  url: https://mcp.factorialhr.com
+  typ: offiziell
+  herkunft: Factorial
+  transport: remote-gehostet
+  auth: OAuth 2.0 mit DCR
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Unter anderem Zeiterfassung, Abwesenheiten und Aufgaben.
+  quelle: https://apidoc.factorialhr.com/docs/mcp-server
+  geprueft_am: 2026-10-19
+- name: mcp-factorial
+  kategorie: Personal (HR)
+  system: Factorial
+  url: https://github.com/t4dhg/mcp-factorial
+  repo: t4dhg/mcp-factorial
+  typ: community
+  herkunft: t4dhg
+  transport: stdio
+  auth: API-Schlüssel oder OAuth
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 3
+  zuletzt_aktiv: 2026-09-08
+  archiviert: false
+  hinweis: Lohndaten nur lesend; Schreibzugriffe werden protokolliert.
+  quelle: https://github.com/t4dhg/mcp-factorial
+  geprueft_am: 2026-10-19
+- name: personio-mcp-server (NikolaiGoMedicus)
+  kategorie: Personal (HR)
+  system: Personio
+  url: https://github.com/NikolaiGoMedicus/personio-mcp-server
+  repo: NikolaiGoMedicus/personio-mcp-server
+  typ: community
+  herkunft: NikolaiGoMedicus
+  transport: stdio
+  auth: Personio-API-Zugangsdaten
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 1
+  zuletzt_aktiv: 2026-07-26
+  archiviert: false
+  hinweis: Verarbeitet personenbezogene Daten; das README weist auf destruktive Tools für Anwesenheiten hin.
+  quelle: https://github.com/NikolaiGoMedicus/personio-mcp-server
+  geprueft_am: 2026-10-19
+- name: personio-mcp (gyopiazza)
+  kategorie: Personal (HR)
+  system: Personio
+  url: https://github.com/gyopiazza/personio-mcp
+  repo: gyopiazza/personio-mcp
+  typ: community
+  herkunft: gyopiazza
+  transport: stdio
+  auth: Personio-API-Zugangsdaten
+  zugriff: lesen-schreiben
+  lizenz: keine
+  sprache: TypeScript
+  sterne: 0
+  zuletzt_aktiv: 2026-08-28
+  archiviert: false
+  hinweis: Zugriff über die Personio-API.
+  quelle: https://github.com/gyopiazza/personio-mcp
+  geprueft_am: 2026-10-19
+- name: sf-mcp
+  kategorie: Personal (HR)
+  system: SAP SuccessFactors
+  url: https://github.com/aiadiguru2025/sf-mcp
+  repo: aiadiguru2025/sf-mcp
+  typ: community
+  herkunft: aiadiguru2025
+  transport: beides
+  auth: SuccessFactors-API-Zugangsdaten
+  zugriff: lesen
+  lizenz: MIT
+  sprache: Python
+  sterne: 13
+  zuletzt_aktiv: 2026-07-04
+  archiviert: false
+  hinweis: Abfragen über die OData-API von SuccessFactors.
+  quelle: https://github.com/aiadiguru2025/sf-mcp
+  geprueft_am: 2026-10-19
+# ---------------------------------------------------------------- E-Commerce
+- name: Shopware MCP Server
+  kategorie: E-Commerce
+  system: Shopware 6
+  url: https://developer.shopware.com/docs/products/tools/mcp-server/intro.html
+  typ: offiziell
+  herkunft: Shopware
+  transport: http
+  auth: Admin-API-Integration bzw. Store-API-Zugriffsschlüssel
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  protokoll: 2025-11-25
+  hinweis: Im Shopware-Kern enthalten, Endpunkte /api/_mcp (Admin) und /store-api/_mcp (Storefront).
+  quelle: https://developer.shopware.com/docs/products/tools/mcp-server/intro.html
+  geprueft_am: 2026-10-19
+- name: Shopify Dev MCP
+  kategorie: E-Commerce
+  system: Shopify (Entwicklung)
+  url: https://shopify.dev/docs/apps/build/ai-toolkit
+  typ: offiziell
+  herkunft: Shopify
+  transport: stdio
+  auth: keine
+  zugriff: lesen
+  lizenz: ISC
+  hinweis: npm-Paket @shopify/dev-mcp; nur Dokumentation und API-Schemata, keine Shopdaten. Telemetrie standardmäßig aktiv.
+  quelle: https://shopify.dev/docs/apps/build/ai-toolkit
+  geprueft_am: 2026-10-19
+- name: Shopify Storefront MCP
+  kategorie: E-Commerce
+  system: Shopify-Shops
+  url: https://shopify.dev/docs/apps/build/storefront-mcp
+  typ: offiziell
+  herkunft: Shopify
+  transport: remote-gehostet
+  auth: keine
+  zugriff: lesen
+  lizenz: proprietär
+  hinweis: Katalog- und Warenkorb-Tools unter /api/mcp wurden entfernt, Shopify verweist dafür auf das Universal Commerce Protocol. Erhalten ist die Suche in Shop-Richtlinien und FAQ.
+  quelle: https://shopify.dev/docs/apps/build/storefront-mcp
+  geprueft_am: 2026-10-19
+- name: shopware-mcp (bnymnDev)
+  kategorie: E-Commerce
+  system: Shopware 6
+  url: https://github.com/bnymnDev/shopware-mcp
+  repo: bnymnDev/shopware-mcp
+  typ: community
+  herkunft: bnymnDev
+  transport: beides
+  auth: Admin-API-Integration
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 43
+  zuletzt_aktiv: 2026-10-18
+  archiviert: false
+  hinweis: Nur lesend, solange nicht mit --allow-write gestartet; Schreibzugriffe laufen zuerst als Probelauf.
+  quelle: https://github.com/bnymnDev/shopware-mcp
+  geprueft_am: 2026-10-19
+- name: shopware-mcp-server (kochfreiburg)
+  kategorie: E-Commerce
+  system: Shopware 6
+  url: https://github.com/kochfreiburg/shopware-mcp-server
+  repo: kochfreiburg/shopware-mcp-server
+  typ: community
+  herkunft: kochfreiburg
+  transport: http
+  auth: Admin-API-Integration
+  zugriff: lesen-schreiben
+  lizenz: AGPL-3.0
+  sprache: JavaScript
+  sterne: 0
+  zuletzt_aktiv: 2026-10-09
+  archiviert: false
+  hinweis: Betrieb als Container vorgesehen.
+  quelle: https://github.com/kochfreiburg/shopware-mcp-server
+  geprueft_am: 2026-10-19
+- name: shopify-mcp (GeLi2001)
+  kategorie: E-Commerce
+  system: Shopify
+  url: https://github.com/GeLi2001/shopify-mcp
+  repo: GeLi2001/shopify-mcp
+  typ: community
+  herkunft: GeLi2001
+  transport: stdio
+  auth: Admin-API-Zugriffstoken
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 236
+  zuletzt_aktiv: 2026-04-05
+  archiviert: false
+  hinweis: Produkte, Kunden und Bestellungen über die Admin-GraphQL-API.
+  quelle: https://github.com/GeLi2001/shopify-mcp
+  geprueft_am: 2026-10-19
+- name: BillbeeMcpServer
+  kategorie: E-Commerce
+  system: Billbee
+  url: https://github.com/biegomar/BillbeeMcpServer
+  repo: biegomar/BillbeeMcpServer
+  typ: community
+  herkunft: biegomar
+  transport: stdio
+  auth: Billbee-API-Schlüssel und Benutzer
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: C#
+  sterne: 0
+  zuletzt_aktiv: 2026-03-17
+  archiviert: false
+  hinweis: "In C#/.NET."
+  quelle: https://github.com/biegomar/BillbeeMcpServer
+  geprueft_am: 2026-10-19
+- name: billbee-mcp-server (kochfreiburg)
+  kategorie: E-Commerce
+  system: Billbee
+  url: https://github.com/kochfreiburg/billbee-mcp-server
+  repo: kochfreiburg/billbee-mcp-server
+  typ: community
+  herkunft: kochfreiburg
+  transport: http
+  auth: Billbee-API-Schlüssel und Benutzer
+  zugriff: lesen-schreiben
+  lizenz: AGPL-3.0
+  sprache: JavaScript
+  sterne: 0
+  zuletzt_aktiv: 2026-09-26
+  archiviert: false
+  hinweis: Betrieb als Container vorgesehen.
+  quelle: https://github.com/kochfreiburg/billbee-mcp-server
+  geprueft_am: 2026-10-19
+# ---------------------------------------------------------------- Zusammenarbeit
+- name: Microsoft 365 Server (Agent 365)
+  kategorie: Zusammenarbeit
+  system: Outlook, Kalender, Teams, Word, OneDrive und SharePoint
+  url: https://github.com/microsoft/mcp
+  typ: offiziell
+  herkunft: Microsoft
+  transport: remote-gehostet
+  auth: OAuth (Microsoft Entra ID)
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Mehrere gehostete Server je Tenant unter agent365.svc.cloud.microsoft, unter anderem für Mail, Kalender, Teams, Word, OneDrive/SharePoint und SharePoint-Listen; im Katalog microsoft/mcp aufgeführt.
+  quelle: https://github.com/microsoft/mcp
+  geprueft_am: 2026-10-19
+- name: Microsoft MCP Server for Enterprise
+  kategorie: Zusammenarbeit
+  system: Microsoft Entra ID / Microsoft Graph
+  url: https://mcp.svc.cloud.microsoft/enterprise
+  repo: microsoft/EnterpriseMCP
+  typ: offiziell
+  herkunft: Microsoft
+  transport: remote-gehostet
+  auth: OAuth (Microsoft Entra ID)
+  zugriff: lesen
+  lizenz: proprietär
+  sterne: 58
+  zuletzt_aktiv: 2026-06-04
+  archiviert: false
+  hinweis: Öffentliche Vorschau, nur lesende Graph-Abfragen für IT-Administration. Das Repository enthält nur Dokumentation (CC-BY-4.0).
+  quelle: https://github.com/microsoft/EnterpriseMCP
+  geprueft_am: 2026-10-19
+- name: Atlassian Rovo MCP Server
+  kategorie: Zusammenarbeit
+  system: Jira und Confluence (Cloud)
+  url: https://mcp.atlassian.com/v2/mcp
+  repo: atlassian/atlassian-mcp-server
+  typ: offiziell
+  herkunft: Atlassian
+  transport: remote-gehostet
+  auth: OAuth 2.1 oder API-Token
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  sprache: JavaScript
+  sterne: 1107
+  zuletzt_aktiv: 2026-10-10
+  archiviert: false
+  hinweis: Nur Atlassian Cloud. Die Administration gibt Tool-Gruppen (lesen, schreiben, löschen) frei. Das Repository unter Apache-2.0 enthält Konfiguration und Doku.
+  quelle: https://github.com/atlassian/atlassian-mcp-server
+  geprueft_am: 2026-10-19
+- name: Notion MCP (gehostet)
+  kategorie: Zusammenarbeit
+  system: Notion
+  url: https://mcp.notion.com/mcp
+  typ: offiziell
+  herkunft: Notion
+  transport: remote-gehostet
+  auth: OAuth mit PKCE
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Von Notion empfohlener Weg; der lokale Open-Source-Server wird laut Notion nicht mehr aktiv gepflegt.
+  quelle: https://developers.notion.com/guides/mcp/overview
+  geprueft_am: 2026-10-19
+- name: notion-mcp-server (lokal)
+  kategorie: Zusammenarbeit
+  system: Notion
+  url: https://github.com/makenotion/notion-mcp-server
+  repo: makenotion/notion-mcp-server
+  typ: offiziell
+  herkunft: Notion
+  transport: beides
+  auth: Integration-Token
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 4671
+  zuletzt_aktiv: 2026-09-20
+  archiviert: false
+  hinweis: Laut Notion-Dokumentation nicht mehr aktiv gepflegt. Ein Token nur mit Leserecht ist möglich.
+  quelle: https://developers.notion.com/guides/mcp/overview
+  geprueft_am: 2026-10-19
+- name: Slack MCP Server
+  kategorie: Zusammenarbeit
+  system: Slack
+  url: https://mcp.slack.com/mcp
+  typ: offiziell
+  herkunft: Slack
+  transport: remote-gehostet
+  auth: OAuth über registrierte Slack-App, ohne DCR
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Allgemein verfügbar seit 17.02.2026.
+  quelle: https://docs.slack.dev/ai/slack-mcp-server/
+  geprueft_am: 2026-10-19
+- name: ms-365-mcp-server
+  kategorie: Zusammenarbeit
+  system: Microsoft 365 (Graph)
+  url: https://github.com/Softeria/ms-365-mcp-server
+  repo: Softeria/ms-365-mcp-server
+  typ: community
+  herkunft: Softeria
+  transport: beides
+  auth: OAuth (Microsoft Entra ID)
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 1058
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Mail, Kalender, Dateien, Teams und mehr; Schalter --read-only und Tool-Presets.
+  quelle: https://github.com/Softeria/ms-365-mcp-server
+  geprueft_am: 2026-10-19
+- name: Lokka
+  kategorie: Zusammenarbeit
+  system: Microsoft Graph und Azure
+  url: https://github.com/merill/lokka
+  repo: merill/lokka
+  typ: community
+  herkunft: merill
+  transport: stdio
+  auth: Entra-App, Zertifikat oder interaktiv
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: JavaScript
+  sterne: 306
+  zuletzt_aktiv: 2026-09-25
+  archiviert: false
+  hinweis: Für Tenant-Administration; Rechte ergeben sich aus den Graph-Berechtigungen der App.
+  quelle: https://github.com/merill/lokka
+  geprueft_am: 2026-10-19
+- name: teams-mcp (floriscornel)
+  kategorie: Zusammenarbeit
+  system: Microsoft Teams
+  url: https://github.com/floriscornel/teams-mcp
+  repo: floriscornel/teams-mcp
+  typ: community
+  herkunft: floriscornel
+  transport: stdio
+  auth: OAuth (Microsoft Entra ID)
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 145
+  zuletzt_aktiv: 2026-10-17
+  archiviert: false
+  hinweis: Nur-Lese-Modus verfügbar.
+  quelle: https://github.com/floriscornel/teams-mcp
+  geprueft_am: 2026-10-19
+- name: sharepoint-mcp
+  kategorie: Zusammenarbeit
+  system: Microsoft SharePoint
+  url: https://github.com/DEmodoriGatsuO/sharepoint-mcp
+  repo: DEmodoriGatsuO/sharepoint-mcp
+  typ: community
+  herkunft: DEmodoriGatsuO
+  transport: beides
+  auth: Entra-App (Client Secret)
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Python
+  sterne: 91
+  zuletzt_aktiv: 2026-04-14
+  archiviert: false
+  hinweis: Dokumente und Listen in SharePoint über Microsoft Graph.
+  quelle: https://github.com/DEmodoriGatsuO/sharepoint-mcp
+  geprueft_am: 2026-10-19
+- name: mcp-atlassian
+  kategorie: Zusammenarbeit
+  system: Jira und Confluence (Cloud, Server, Data Center)
+  url: https://github.com/sooperset/mcp-atlassian
+  repo: sooperset/mcp-atlassian
+  typ: community
+  herkunft: sooperset
+  transport: beides
+  auth: API-Token, Personal Access Token oder OAuth
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Python
+  sterne: 6019
+  zuletzt_aktiv: 2026-09-19
+  archiviert: false
+  hinweis: Unterstützt auch Server- und Data-Center-Installationen. Schalter READ_ONLY_MODE verfügbar.
+  quelle: https://github.com/sooperset/mcp-atlassian
+  geprueft_am: 2026-10-19
+- name: notion-mcp-server (awkoy)
+  kategorie: Zusammenarbeit
+  system: Notion
+  url: https://github.com/awkoy/notion-mcp-server
+  repo: awkoy/notion-mcp-server
+  typ: community
+  herkunft: awkoy
+  transport: beides
+  auth: Integration-Token
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 177
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Gebündelte Schreibvorgänge mit Rücknahme bei Fehlern.
+  quelle: https://github.com/awkoy/notion-mcp-server
+  geprueft_am: 2026-10-19
+- name: slack-mcp-server (korotovsky)
+  kategorie: Zusammenarbeit
+  system: Slack
+  url: https://github.com/korotovsky/slack-mcp-server
+  repo: korotovsky/slack-mcp-server
+  typ: community
+  herkunft: korotovsky
+  transport: beides
+  auth: OAuth- oder Browser-Token
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: Go
+  sterne: 1869
+  zuletzt_aktiv: 2026-07-16
+  archiviert: false
+  hinweis: Nachrichten senden ist standardmäßig deaktiviert. Die Anmeldung mit Browser-Token ist im Workspace vorher abzustimmen.
+  quelle: https://github.com/korotovsky/slack-mcp-server
+  geprueft_am: 2026-10-19
+- name: nextcloud-mcp-server
+  kategorie: Zusammenarbeit
+  system: Nextcloud
+  url: https://github.com/cbcoutinho/nextcloud-mcp-server
+  repo: cbcoutinho/nextcloud-mcp-server
+  typ: community
+  herkunft: cbcoutinho
+  transport: beides
+  auth: App-Passwort oder OAuth
+  zugriff: lesen-schreiben
+  lizenz: AGPL-3.0
+  sprache: Python
+  sterne: 387
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Dateien, Kalender, Kontakte, Notizen und Deck; mehrere Benutzer über Login Flow v2.
+  quelle: https://github.com/cbcoutinho/nextcloud-mcp-server
+  geprueft_am: 2026-10-19
+# ---------------------------------------------------------------- Logistik und Versand
+- name: DHL API Assistant MCP Server
+  kategorie: Logistik und Versand
+  system: DHL-APIs (Versand, Retouren, Sendungsverfolgung)
+  url: https://developer.dhl.com/dhl-api-assistant-manual-mcp-integration-guide?language_content_entity=en
+  typ: offiziell
+  herkunft: DHL
+  transport: remote-gehostet
+  auth: API-Schlüssel im Header dhl-api-key
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Nur Sandbox, kein Zugriff auf Produktivumgebungen. Schlüssel aus dem DHL Developer Portal.
+  quelle: https://developer.dhl.com/dhl-api-assistant-manual-mcp-integration-guide?language_content_entity=en
+  geprueft_am: 2026-10-19
+- name: Sendcloud MCP Server
+  kategorie: Logistik und Versand
+  system: Sendcloud
+  url: https://mcp.sendcloud.com/mcp
+  typ: offiziell
+  herkunft: Sendcloud
+  transport: remote-gehostet
+  auth: OAuth 2.0 mit CIMD
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Setzt CIMD voraus; Clients ohne CIMD-Unterstützung können sich nicht verbinden.
+  quelle: https://sendcloud.dev/docs/getting-started/mcp-server
+  geprueft_am: 2026-10-19
+# ---------------------------------------------------------------- Banking und Zahlungen
+- name: Stripe MCP
+  kategorie: Banking und Zahlungen
+  system: Stripe
+  url: https://mcp.stripe.com
+  repo: stripe/ai
+  typ: offiziell
+  herkunft: Stripe
+  transport: beides
+  auth: OAuth oder eingeschränkter API-Schlüssel
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 1963
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Gehostet unter mcp.stripe.com, lokal über @stripe/mcp. Laut Stripe werden vollständige Secret Keys ab Dezember 2026 nicht mehr angenommen. Früher unter stripe/agent-toolkit.
+  quelle: https://docs.stripe.com/mcp
+  geprueft_am: 2026-10-19
+- name: PayPal MCP Server
+  kategorie: Banking und Zahlungen
+  system: PayPal
+  url: https://mcp.paypal.com
+  repo: paypal/agent-toolkit
+  typ: offiziell
+  herkunft: PayPal
+  transport: beides
+  auth: OAuth bzw. PayPal-Zugangsdaten
+  zugriff: lesen-schreiben
+  lizenz: Apache-2.0
+  sprache: TypeScript
+  sterne: 196
+  zuletzt_aktiv: 2026-09-01
+  archiviert: false
+  hinweis: Gehostet mit Sandbox mcp.sandbox.paypal.com, lokal über das Agent Toolkit. Rechnungen, Bestellungen, Abos und Streitfälle.
+  quelle: https://developer.paypal.com/ai-tools/mcp-server
+  geprueft_am: 2026-10-19
+- name: Mollie MCP Server
+  kategorie: Banking und Zahlungen
+  system: Mollie
+  url: https://mcp.mollie.com/mcp
+  typ: offiziell
+  herkunft: Mollie
+  transport: remote-gehostet
+  auth: OAuth mit CIMD
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Anmeldung mit statischem Token ist abgekündigt.
+  quelle: https://docs.mollie.com/docs/mollie-mcp-server
+  geprueft_am: 2026-10-19
+- name: Qonto MCP Server
+  kategorie: Banking und Zahlungen
+  system: Qonto
+  url: https://mcp.qonto.com/mcp
+  typ: offiziell
+  herkunft: Qonto
+  transport: remote-gehostet
+  auth: OAuth
+  zugriff: lesen-schreiben
+  lizenz: proprietär
+  hinweis: Keine SEPA-Überweisungen über MCP. Zusätzlich ein nur lesender Endpunkt für mehrere Organisationen.
+  quelle: https://docs.qonto.com/mcp/overview
+  geprueft_am: 2026-10-19
+# ---------------------------------------------------------------- Dokumente und DMS
+- name: docuware-mcp
+  kategorie: Dokumente und DMS
+  system: DocuWare
+  url: https://github.com/sniner/docuware-mcp
+  repo: sniner/docuware-mcp
+  typ: community
+  herkunft: sniner
+  transport: beides
+  auth: DocuWare-Benutzer oder OAuth
+  zugriff: lesen
+  lizenz: BSD-3-Clause
+  sprache: Python
+  sterne: 0
+  zuletzt_aktiv: 2026-08-31
+  archiviert: false
+  protokoll: 2026-07-28, 2025-11-25
+  hinweis: Suche und Abruf in DocuWare-Archiven, auf PyPI als docuware-mcp.
+  quelle: https://github.com/sniner/docuware-mcp
+  geprueft_am: 2026-10-19
+- name: elo-mcp (Herzog)
+  kategorie: Dokumente und DMS
+  system: ELO ECM
+  url: https://github.com/Herzog-GmbH/elo-mcp
+  repo: Herzog-GmbH/elo-mcp
+  typ: community
+  herkunft: Herzog GmbH
+  transport: stdio
+  auth: ELO-Benutzer
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: JavaScript
+  sterne: 0
+  zuletzt_aktiv: 2026-10-18
+  archiviert: false
+  hinweis: Für ELO 25 unter Windows. Jeder Schreibvorgang braucht Vorschau und Einmal-Token. Dokumentation auf Deutsch.
+  quelle: https://github.com/Herzog-GmbH/elo-mcp
+  geprueft_am: 2026-10-19
+- name: elo-mcp-server (LOUPZ-DE)
+  kategorie: Dokumente und DMS
+  system: ELO ECM
+  url: https://github.com/LOUPZ-DE/elo-mcp-server
+  repo: LOUPZ-DE/elo-mcp-server
+  typ: community
+  herkunft: LOUPZ-DE
+  transport: beides
+  auth: ELO-Benutzer oder OAuth
+  zugriff: lesen
+  lizenz: CC-BY-NC-4.0
+  sprache: TypeScript
+  sterne: 2
+  zuletzt_aktiv: 2026-10-09
+  archiviert: false
+  hinweis: CC BY-NC 4.0, nur nicht-kommerzielle Nutzung. Vier Schreiboperationen sind standardmäßig aus und nur mit persönlicher ELO-Anmeldung nutzbar.
+  quelle: https://github.com/LOUPZ-DE/elo-mcp-server
+  geprueft_am: 2026-10-19
+- name: AnythingMCP
+  kategorie: Dokumente und DMS
+  system: d.velop, ELO, SAP und weitere über Konnektoren
+  url: https://github.com/HelpCode-ai/anythingmcp
+  repo: HelpCode-ai/anythingmcp
+  typ: community
+  herkunft: HelpCode-ai
+  transport: http
+  auth: je Konnektor, OAuth für Clients
+  zugriff: lesen-schreiben
+  lizenz: AGPL-3.0
+  sprache: TypeScript
+  sterne: 759
+  zuletzt_aktiv: 2026-10-19
+  archiviert: false
+  hinweis: Gateway, das REST-, SOAP- und Datenbank-Schnittstellen als MCP-Tools bereitstellt; Konnektoren für d.velop und ELO. Zusätzlich als gehosteter Dienst angeboten.
+  quelle: https://github.com/HelpCode-ai/anythingmcp
+  geprueft_am: 2026-10-19
+# ---------------------------------------------------------------- Behörden und Open Data
+- name: germany-mcp-server
+  kategorie: Behörden und Open Data
+  system: Autobahn-API, DWD, NINA
+  url: https://github.com/AiAgentKarl/germany-mcp-server
+  repo: AiAgentKarl/germany-mcp-server
+  typ: community
+  herkunft: AiAgentKarl
+  transport: stdio
+  auth: keine
+  zugriff: lesen
+  lizenz: MIT
+  sprache: Python
+  sterne: 3
+  zuletzt_aktiv: 2026-04-03
+  archiviert: false
+  hinweis: 16 Tools zu offenen Bundes-APIs, unter anderem Verkehrslage, Wetter und Warnmeldungen, ohne API-Schlüssel nutzbar.
+  quelle: https://github.com/AiAgentKarl/germany-mcp-server
+  geprueft_am: 2026-10-19
+- name: deutsche-gesetze-mcp
+  kategorie: Behörden und Open Data
+  system: Bundesgesetze (gesetze-im-internet.de)
+  url: https://github.com/floleuerer/deutsche-gesetze-mcp
+  repo: floleuerer/deutsche-gesetze-mcp
+  typ: community
+  herkunft: floleuerer
+  transport: stdio
+  auth: keine
+  zugriff: lesen
+  lizenz: MIT
+  sprache: Python
+  sterne: 53
+  zuletzt_aktiv: 2025-12-19
+  archiviert: false
+  hinweis: Suche und Abruf von Gesetzestexten. Ersetzt keine Rechtsberatung.
+  quelle: https://github.com/floleuerer/deutsche-gesetze-mcp
+  geprueft_am: 2026-10-19
+- name: DejureMcp
+  kategorie: Behörden und Open Data
+  system: dejure.org
+  url: https://github.com/halllo/DejureMcp
+  repo: halllo/DejureMcp
+  typ: community
+  herkunft: halllo
+  transport: stdio
+  auth: keine
+  zugriff: lesen
+  lizenz: MIT
+  sprache: C#
+  sterne: 4
+  zuletzt_aktiv: 2026-08-12
+  archiviert: false
+  hinweis: "Rechtsgebiete, Gesetze und Paragrafen, bei Bedarf von dejure.org geladen; in C#/.NET."
+  quelle: https://github.com/halllo/DejureMcp
+  geprueft_am: 2026-10-19
+- name: handelsregister-mcp (lexdoudkin)
+  kategorie: Behörden und Open Data
+  system: Handelsregister
+  url: https://github.com/lexdoudkin/handelsregister-mcp
+  repo: lexdoudkin/handelsregister-mcp
+  typ: community
+  herkunft: lexdoudkin
+  transport: stdio
+  auth: keine
+  zugriff: lesen
+  lizenz: Apache-2.0
+  sprache: Python
+  sterne: 2
+  zuletzt_aktiv: 2026-06-21
+  archiviert: false
+  hinweis: Firmensuche, Registerauszüge und Dokumentenlisten aus handelsregister.de; dessen Nutzungsbedingungen gelten auch für automatisierte Abrufe.
+  quelle: https://github.com/lexdoudkin/handelsregister-mcp
+  geprueft_am: 2026-10-19
+- name: handelsregister-mcp (mirrorops-io)
+  kategorie: Behörden und Open Data
+  system: Handelsregister
+  url: https://github.com/mirrorops-io/handelsregister-mcp
+  repo: mirrorops-io/handelsregister-mcp
+  typ: community
+  herkunft: mirrorops-io
+  transport: stdio
+  auth: keine
+  zugriff: lesen
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 0
+  zuletzt_aktiv: 2026-06-16
+  archiviert: false
+  hinweis: Firmensuche im Handelsregister, in TypeScript.
+  quelle: https://github.com/mirrorops-io/handelsregister-mcp
+  geprueft_am: 2026-10-19
+- name: destatis-mcp
+  kategorie: Behörden und Open Data
+  system: Statistisches Bundesamt (GENESIS-Online)
+  url: https://github.com/inooLabs/destatis-mcp
+  repo: inooLabs/destatis-mcp
+  typ: community
+  herkunft: inooLabs
+  transport: http
+  auth: GENESIS-API-Token (kostenlose Registrierung)
+  zugriff: lesen
+  lizenz: keine
+  sprache: Python
+  sterne: 1
+  zuletzt_aktiv: 2025-12-09
+  archiviert: false
+  hinweis: Tabellen und Zeitreihen aus GENESIS-Online.
+  quelle: https://github.com/inooLabs/destatis-mcp
+  geprueft_am: 2026-10-19
+- name: dwd-mcp-server (jimimatt)
+  kategorie: Behörden und Open Data
+  system: Deutscher Wetterdienst (über Bright Sky)
+  url: https://github.com/jimimatt/dwd-mcp-server
+  repo: jimimatt/dwd-mcp-server
+  typ: community
+  herkunft: jimimatt
+  transport: stdio
+  auth: keine
+  zugriff: lesen
+  lizenz: MIT
+  sprache: Python
+  sterne: 0
+  zuletzt_aktiv: 2026-02-18
+  archiviert: false
+  hinweis: Wetterdaten des DWD über die Bright-Sky-API.
+  quelle: https://github.com/jimimatt/dwd-mcp-server
+  geprueft_am: 2026-10-19
+- name: dwd-mcp (difu)
+  kategorie: Behörden und Open Data
+  system: Deutscher Wetterdienst
+  url: https://github.com/difu/dwd-mcp
+  repo: difu/dwd-mcp
+  typ: community
+  herkunft: difu
+  transport: stdio
+  auth: keine
+  zugriff: lesen
+  lizenz: MIT
+  sprache: Python
+  sterne: 1
+  zuletzt_aktiv: 2025-09-14
+  archiviert: false
+  hinweis: Wetterdaten aus dem Open-Data-Angebot des DWD.
+  quelle: https://github.com/difu/dwd-mcp
+  geprueft_am: 2026-10-19
+- name: bundestag-mcp
+  kategorie: Behörden und Open Data
+  system: DIP-API des Deutschen Bundestags, abgeordnetenwatch
+  url: https://github.com/oguzhan/bundestag-mcp
+  repo: oguzhan/bundestag-mcp
+  typ: community
+  herkunft: oguzhan
+  transport: stdio
+  auth: keine
+  zugriff: lesen
+  lizenz: MIT
+  sprache: Python
+  sterne: 1
+  zuletzt_aktiv: 2026-04-16
+  archiviert: false
+  hinweis: Drucksachen, Vorgänge und Plenarprotokolle; das README kennzeichnet das Projekt als in Arbeit.
+  quelle: https://github.com/oguzhan/bundestag-mcp
+  geprueft_am: 2026-10-19
+- name: openclaw-bahn-mcp
+  kategorie: Behörden und Open Data
+  system: Bahn- und ÖPNV-Auskunft (Transitous)
+  url: https://github.com/biacz/openclaw-bahn-mcp
+  repo: biacz/openclaw-bahn-mcp
+  typ: community
+  herkunft: biacz
+  transport: stdio
+  auth: keine
+  zugriff: lesen
+  lizenz: MIT
+  sterne: 0
+  zuletzt_aktiv: 2026-10-15
+  archiviert: false
+  hinweis: Verbindungen und Abfahrten mit Echtzeit aus den offenen DELFI-Daten über Transitous, nicht über eine API der Deutschen Bahn.
+  quelle: https://github.com/biacz/openclaw-bahn-mcp
+  geprueft_am: 2026-10-19
