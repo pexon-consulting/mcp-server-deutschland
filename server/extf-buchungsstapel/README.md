@@ -534,8 +534,10 @@ Zwei optionale Abgleiche laufen nur, wenn Sie die Referenzen selbst bereitstelle
 
 MIT, siehe [LICENSE](LICENSE).
 
-- **Haftung.** Die Software und die Texte werden unentgeltlich und ohne Zusicherung bestimmter Eigenschaften bereitgestellt. Soweit gesetzlich zulässig, ist die Haftung ausgeschlossen. Unberührt bleibt die Haftung für Vorsatz und grobe Fahrlässigkeit, für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit, für arglistig verschwiegene Mängel und nach dem Produkthaftungsgesetz. Prüfen Sie jede erzeugte Datei, bevor Sie sie weitergeben oder importieren.
+- **Technisches Hilfswerk.** Dieser Server prüft das Dateiformat, nicht den Inhalt. Ob eine Buchung fachlich oder steuerlich richtig ist, entscheidet er nicht.
+- **Keine Haftung für KI-Ausgaben.** Was ein KI-Assistent mit diesen Werkzeugen erzeugt, vorschlägt oder erklärt, stammt vom Sprachmodell und nicht von uns. Solche Ausgaben können falsch, unvollständig oder erfunden sein. Für den Output von KI-Systemen übernehmen wir keine Haftung. Prüfen Sie jede erzeugte Datei, bevor Sie sie weitergeben oder importieren.
+- **Haftung.** Die Software und die Texte werden unentgeltlich und ohne Zusicherung bestimmter Eigenschaften bereitgestellt. Soweit gesetzlich zulässig, ist die Haftung ausgeschlossen. Unberührt bleibt die Haftung für Vorsatz und grobe Fahrlässigkeit, für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit, für arglistig verschwiegene Mängel und nach dem Produkthaftungsgesetz.
 
-> **Hinweis:** Technische Informationen nach Stand 20.10.2026, ohne Gewähr für Vollständigkeit und Richtigkeit. Keine Rechts- oder Steuerberatung; die Autoren sind keine Rechtsanwälte, Steuerberater oder Datenschutzbeauftragten. Produktnamen sind Marken ihrer Inhaber; es besteht keine Verbindung zu den genannten Herstellern.
+> **Hinweis:** Technisches Hilfswerk, keine Beratung. Technische Informationen nach Stand 20.10.2026, ohne Gewähr für Vollständigkeit und Richtigkeit. Keine Rechts- oder Steuerberatung; die Autoren sind keine Rechtsanwälte, Steuerberater oder Datenschutzbeauftragten. Produktnamen sind Marken ihrer Inhaber; es besteht keine Verbindung zu den genannten Herstellern.
 
 > Die Autoren erbringen keine Hilfeleistung in Steuersachen im Sinne des Steuerberatungsgesetzes. Ob und wie Buchungen steuerlich richtig sind, klären Sie mit Ihrer Steuerberatung. DATEV ist eine Marke der DATEV eG; dieses Projekt ist kein Produkt der DATEV eG und nicht von ihr geprüft oder freigegeben.

@@ -133,10 +133,13 @@ TRANSPORT_ANZEIGE = {
 }
 
 HINWEIS_ALLGEMEIN = (
-    "> **Hinweis:** Technische Informationen nach Stand 19.10.2026, ohne Gewähr für "
-    "Vollständigkeit und Richtigkeit. Keine Rechts- oder Steuerberatung; die Autoren sind "
-    "keine Rechtsanwälte, Steuerberater oder Datenschutzbeauftragten. Produktnamen sind "
-    "Marken ihrer Inhaber; es besteht keine Verbindung zu den genannten Herstellern."
+    "> **Hinweis:** Technisches Hilfswerk, keine Beratung. Technische Informationen nach "
+    "Stand 19.10.2026, ohne Gewähr für Vollständigkeit und Richtigkeit. Keine Rechts-, Steuer- "
+    "oder Datenschutzberatung; die Autoren sind keine Rechtsanwälte, Steuerberater oder "
+    "Datenschutzbeauftragten. Was ein KI-Assistent mit diesen Servern erzeugt, stammt vom "
+    "Sprachmodell und nicht von uns; für den Output von KI-Systemen übernehmen wir keine "
+    "Haftung. Prüfen Sie jede Ausgabe, bevor Sie sie verwenden. Produktnamen sind Marken ihrer "
+    "Inhaber; es besteht keine Verbindung zu den genannten Herstellern."
 )
 HINWEIS_STEUER = (
     "> Die Autoren erbringen keine Hilfeleistung in Steuersachen im Sinne des "

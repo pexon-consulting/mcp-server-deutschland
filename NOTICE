@@ -31,6 +31,14 @@ server/extf-buchungsstapel/SPEZIFIKATION.md.
 
 Haftung
 -------
+Dieses Repository ist ein technisches Hilfswerk. Es ersetzt keine fachliche
+Prüfung und keine Rechts-, Steuer- oder Datenschutzberatung.
+
+Was ein KI-Assistent mit dieser Software erzeugt, vorschlägt oder erklärt,
+stammt vom Sprachmodell und nicht von uns. Für den Output von KI-Systemen
+übernehmen wir keine Haftung. Prüfen Sie jede Ausgabe, bevor Sie sie
+verwenden, versenden oder importieren.
+
 Die Software und die Texte werden unentgeltlich und ohne Zusicherung
 bestimmter Eigenschaften bereitgestellt. Soweit gesetzlich zulässig, ist
 die Haftung ausgeschlossen. Unberührt bleibt die Haftung für Vorsatz und

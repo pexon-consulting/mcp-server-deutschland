@@ -6,7 +6,7 @@ Grundlagen: [Was ist ein MCP-Server?](anleitungen/was-ist-ein-mcp-server.md). Vo
 
 **Stand:** 19.10.2026. 138 Einträge, davon 48 offiziell, 88 Community und 2 kommerziell. Die Liste wird aus `daten/server.yaml` erzeugt; Änderungen bitte dort vornehmen.
 
-> **Hinweis:** Technische Informationen nach Stand 19.10.2026, ohne Gewähr für Vollständigkeit und Richtigkeit. Keine Rechts- oder Steuerberatung; die Autoren sind keine Rechtsanwälte, Steuerberater oder Datenschutzbeauftragten. Produktnamen sind Marken ihrer Inhaber; es besteht keine Verbindung zu den genannten Herstellern.
+> **Hinweis:** Technisches Hilfswerk, keine Beratung. Technische Informationen nach Stand 19.10.2026, ohne Gewähr für Vollständigkeit und Richtigkeit. Keine Rechts-, Steuer- oder Datenschutzberatung; die Autoren sind keine Rechtsanwälte, Steuerberater oder Datenschutzbeauftragten. Was ein KI-Assistent mit diesen Servern erzeugt, stammt vom Sprachmodell und nicht von uns; für den Output von KI-Systemen übernehmen wir keine Haftung. Prüfen Sie jede Ausgabe, bevor Sie sie verwenden. Produktnamen sind Marken ihrer Inhaber; es besteht keine Verbindung zu den genannten Herstellern.
 
 ## Legende
 
@@ -303,4 +303,4 @@ Ein Server fehlt oder eine Angabe ist veraltet? Öffnen Sie ein Issue oder einen
 - Der Hinweis ist kurz und sachlich, ohne Werbung und ohne Wertung über Personen oder andere Projekte.
 - Danach `python3 scripts/liste_bauen.py` ausführen; das Skript validiert die Daten und erzeugt diese Datei neu.
 
-> **Hinweis:** Technische Informationen nach Stand 19.10.2026, ohne Gewähr für Vollständigkeit und Richtigkeit. Keine Rechts- oder Steuerberatung; die Autoren sind keine Rechtsanwälte, Steuerberater oder Datenschutzbeauftragten. Produktnamen sind Marken ihrer Inhaber; es besteht keine Verbindung zu den genannten Herstellern.
+> **Hinweis:** Technisches Hilfswerk, keine Beratung. Technische Informationen nach Stand 19.10.2026, ohne Gewähr für Vollständigkeit und Richtigkeit. Keine Rechts-, Steuer- oder Datenschutzberatung; die Autoren sind keine Rechtsanwälte, Steuerberater oder Datenschutzbeauftragten. Was ein KI-Assistent mit diesen Servern erzeugt, stammt vom Sprachmodell und nicht von uns; für den Output von KI-Systemen übernehmen wir keine Haftung. Prüfen Sie jede Ausgabe, bevor Sie sie verwenden. Produktnamen sind Marken ihrer Inhaber; es besteht keine Verbindung zu den genannten Herstellern.

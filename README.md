@@ -2,7 +2,7 @@
 
 Welche MCP-Server gibt es für SAP, DATEV, lexware office, sevdesk, HubSpot, Power BI, Business Central, Personio, Shopware und Postgres, wer bietet sie an, und was dürfen sie? Dieses Repository sammelt die Antworten auf Deutsch: eine gepflegte Liste mit über 130 MCP-Servern, einen eigenen, getesteten MCP-Server für das DATEV-Format und 13 Anleitungen.
 
-> Stand: 19.10.2026. MIT-Lizenz. Keine Rechts- oder Steuerberatung. Kein offizielles Projekt der genannten Hersteller.
+> Stand: 19.10.2026. MIT-Lizenz. Technisches Hilfswerk, keine Beratung. Wir haften nicht für Ausgaben von KI-Systemen. Kein offizielles Projekt der genannten Hersteller.
 
 ## Inhalt
 
@@ -128,7 +128,8 @@ Fehlt ein Server, ist ein Eintrag veraltet oder falsch? Schlagen Sie die Änderu
 
 ## Hinweise und Lizenz
 
-- **Keine Rechts- oder Steuerberatung.** Die Inhalte sind technische Informationen nach Stand 19.10.2026, ohne Gewähr für Vollständigkeit und Richtigkeit. Die Autoren sind keine Rechtsanwälte, Steuerberater oder Datenschutzbeauftragten. Sie bleiben für den Einsatz der Server in Ihrem Unternehmen verantwortlich, auch datenschutzrechtlich.
+- **Technisches Hilfswerk, keine Beratung.** Dieses Repository stellt Software und technische Informationen bereit, nach Stand 19.10.2026 und ohne Gewähr für Vollständigkeit und Richtigkeit. Es ersetzt keine fachliche Prüfung und keine Rechts-, Steuer- oder Datenschutzberatung. Die Autoren sind keine Rechtsanwälte, Steuerberater oder Datenschutzbeauftragten. Sie bleiben für den Einsatz der Server in Ihrem Unternehmen verantwortlich, auch datenschutzrechtlich.
+- **Keine Haftung für KI-Ausgaben.** Was ein KI-Assistent mit diesen Werkzeugen erzeugt, vorschlägt oder erklärt, stammt vom Sprachmodell und nicht von uns. Solche Ausgaben können falsch, unvollständig oder erfunden sein. Prüfen Sie sie, bevor Sie sie verwenden, versenden oder importieren. Für den Output von KI-Systemen übernehmen wir keine Haftung.
 - **Keine Hilfeleistung in Steuersachen.** Die Autoren erbringen keine Hilfeleistung in Steuersachen im Sinne des Steuerberatungsgesetzes. Ob und wie Buchungen steuerlich richtig sind, klären Sie mit Ihrer Steuerberatung.
 - **Marken.** DATEV ist eine Marke der DATEV eG; dieses Projekt ist kein Produkt der DATEV eG und nicht von ihr geprüft oder freigegeben. Alle anderen Produkt- und Firmennamen sind Marken ihrer Inhaber. Es besteht keine Verbindung zu den genannten Herstellern und keine Empfehlung durch sie.
 - **Haftung.** Die Software und die Texte werden unentgeltlich und ohne Zusicherung bestimmter Eigenschaften bereitgestellt. Soweit gesetzlich zulässig, ist die Haftung ausgeschlossen. Unberührt bleibt die Haftung für Vorsatz und grobe Fahrlässigkeit, für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit, für arglistig verschwiegene Mängel und nach dem Produkthaftungsgesetz. Prüfen Sie jede erzeugte Datei, bevor Sie sie weitergeben oder importieren.
