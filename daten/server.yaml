@@ -679,6 +679,25 @@ server:
   hinweis: Zugriff über die sevdesk-API.
   quelle: https://github.com/codestra/sevdesk-mcp
   geprueft_am: 2026-10-19
+- name: mcp-server-sevdesk
+  kategorie: Buchhaltung und Steuern
+  system: sevdesk
+  url: https://github.com/jaylann/mcp-server-sevdesk
+  repo: jaylann/mcp-server-sevdesk
+  typ: community
+  herkunft: jaylann
+  transport: beides
+  auth: sevdesk-API-Token, im Remote-Modus OAuth
+  zugriff: lesen-schreiben
+  lizenz: MIT
+  sprache: TypeScript
+  sterne: 1
+  zuletzt_aktiv: 2026-11-17
+  archiviert: false
+  protokoll: 2026-07-28
+  hinweis: Standardmäßig nur lesend. Schreiben in Stufen (Entwürfe, Buchen und Festschreiben, Versand), verbindliche Schritte erst nach Freigabe durch den Menschen. E-Rechnungen (XRechnung, ZUGFeRD), DATEV-Export, Umsatzsteuer-Übersicht.
+  quelle: https://github.com/jaylann/mcp-server-sevdesk
+  geprueft_am: 2026-11-18
 - name: Buchhaltungsbutler-MCP (ohneben)
   kategorie: Buchhaltung und Steuern
   system: BuchhaltungsButler

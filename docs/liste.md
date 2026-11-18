@@ -4,7 +4,7 @@ Diese Liste sammelt MCP-Server für Geschäftssysteme, die in Deutschland verbre
 
 Grundlagen: [Was ist ein MCP-Server?](anleitungen/was-ist-ein-mcp-server.md). Vor dem Einsatz: [MCP Sicherheit](anleitungen/mcp-sicherheit.md) und [MCP und DSGVO](anleitungen/mcp-dsgvo.md). Übersicht aller Anleitungen in der [README](../README.md#anleitungen).
 
-**Stand:** 19.10.2026. 138 Einträge, davon 48 offiziell, 88 Community und 2 kommerziell. Die Liste wird aus `daten/server.yaml` erzeugt; Änderungen bitte dort vornehmen.
+**Stand:** 18.11.2026. 139 Einträge, davon 48 offiziell, 89 Community und 2 kommerziell. Die Liste wird aus `daten/server.yaml` erzeugt; Änderungen bitte dort vornehmen.
 
 > **Hinweis:** Technisches Hilfswerk, keine Beratung. Technische Informationen nach Stand 19.10.2026, ohne Gewähr für Vollständigkeit und Richtigkeit. Keine Rechts-, Steuer- oder Datenschutzberatung; die Autoren sind keine Rechtsanwälte, Steuerberater oder Datenschutzbeauftragten. Was ein KI-Assistent mit diesen Servern erzeugt, stammt vom Sprachmodell und nicht von uns; für den Output von KI-Systemen übernehmen wir keine Haftung. Prüfen Sie jede Ausgabe, bevor Sie sie verwenden. Produktnamen sind Marken ihrer Inhaber; es besteht keine Verbindung zu den genannten Herstellern.
 
@@ -20,7 +20,7 @@ Grundlagen: [Was ist ein MCP-Server?](anleitungen/was-ist-ein-mcp-server.md). Vo
 ## Inhalt
 
 - [ERP](#erp) (27)
-- [Buchhaltung und Steuern](#buchhaltung-und-steuern) (18)
+- [Buchhaltung und Steuern](#buchhaltung-und-steuern) (19)
 - [E-Rechnung](#e-rechnung) (6)
 - [CRM und Vertrieb](#crm-und-vertrieb) (13)
 - [BI und Analytics](#bi-und-analytics) (10)
@@ -99,6 +99,7 @@ Anleitung: [MCP Buchhaltung](anleitungen/buchhaltung-mcp.md), [MCP-Server für d
 | [datev-mcp](https://github.com/BadRix90/datev-mcp)<br>DATEV | Community | stdio und HTTP | DATEV-OAuth | lesen und schreiben | MIT | Kein Produkt der DATEV eG. Für die DATEV-APIs ist eine Registrierung im DATEV-Entwicklerportal nötig. |
 | [elster-mcp-server (Infraviored)](https://github.com/Infraviored/elster-mcp-server)<br>ELSTER | Community | stdio | ELSTER-Zertifikat | lesen und schreiben | MIT | Kein Angebot der Finanzverwaltung. Füllt Formulare im ELSTER-Webportal aus und führt die Portal-Prüfungen aus; das Absenden bleibt beim Menschen im Browser. |
 | [buchhaltungsbutler-mcp (mrvnklm)](https://github.com/mrvnklm/buchhaltungsbutler-mcp)<br>BuchhaltungsButler | Community | stdio | BuchhaltungsButler-API-Schlüssel | lesen und schreiben | MIT | Legt auch Bankkonten und Transaktionen an. |
+| [mcp-server-sevdesk](https://github.com/jaylann/mcp-server-sevdesk)<br>sevdesk | Community | stdio und HTTP | sevdesk-API-Token, im Remote-Modus OAuth | lesen und schreiben | MIT | Standardmäßig nur lesend. Schreiben in Stufen (Entwürfe, Buchen und Festschreiben, Versand), verbindliche Schritte erst nach Freigabe durch den Menschen. E-Rechnungen (XRechnung, ZUGFeRD), DATEV-Export, Umsatzsteuer-Übersicht. Protokoll 2026-07-28. |
 | [belege.ai MCP](https://belege.ai/mcp-buchhaltung)<br>belege.ai | kommerziell | gehostet | belege.ai-Konto | lesen | proprietär | Gehosteter Dienst rund um Belege und Buchhaltungsdaten, nur lesend. |
 | [buchhaltungsbutler-mcp (dennismenken)](https://github.com/dennismenken/buchhaltungsbutler-mcp)<br>BuchhaltungsButler | Community | stdio und HTTP | BuchhaltungsButler-API-Schlüssel | lesen und schreiben | MIT | Lese- und Schreibmodus getrennt einstellbar. |
 | [datev-extf-mcp](https://github.com/seamless-engineering/datev-extf-mcp)<br>DATEV-Format (EXTF) | Community | stdio | keine | lesen und schreiben | MIT | Arbeitet nur mit Dateien. Validiert und schreibt Buchungsstapel im DATEV-Format (EXTF), ohne Verbindung zu DATEV. |
